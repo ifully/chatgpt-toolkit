@@ -1,0 +1,13 @@
+GITHUB ÜZERİNDEN YÜKLEME — ifully/chatgpt-toolkit
+
+1) Bu ZIP dosyasını bilgisayarınızda çıkarın.
+2) https://github.com/ifully/chatgpt-toolkit adresini açın.
+3) Add file → Upload files bölümüne girin.
+4) ZIP içindeki ACADEMIC_WRITING_START.md ve integrations klasörünü (iç dosyalarıyla birlikte) yükleme alanına sürükleyin.
+5) Commit directly to main → Commit changes ile kaydedin.
+6) Şu bağlantıyı açarak kontrol edin:
+   https://github.com/ifully/chatgpt-toolkit/blob/main/ACADEMIC_WRITING_START.md
+
+NOT: ZIP dosyasını tek başına yüklemek yerine önce çıkarın.
+NOT: Mevcut Spec Kit, PyAlex, AiShort dosyalarını silmeyin; aynı integrations klasörünün yeni alt modülü olarak ekleyin.
+NOT: Yazma yetkisi yoksa ChatGPT sizin yerinize GitHub'a commit gönderemeyebilir.

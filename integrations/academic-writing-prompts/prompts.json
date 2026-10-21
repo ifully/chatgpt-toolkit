@@ -1,0 +1,559 @@
+{
+  "schema_version": "1.0.0",
+  "module": "academic-writing-prompts",
+  "source_project": "https://github.com/ahmetbersoz/chatgpt-prompts-for-academic-writing",
+  "source_policy": "Linked as inspiration; upstream text and cover image are not redistributed. No explicit LICENSE file found in submitted ZIP or on upstream root as checked 2026-10-21.",
+  "adaptation": "Original Turkish academic research/workflow prompts; not an official upstream release.",
+  "date": "2026-10-21",
+  "citation_style": "APA 7",
+  "prompts": [
+    {
+      "id": "AWL-01",
+      "category": "literature",
+      "title_tr": "Literatür tarama stratejisi",
+      "required_inputs": [
+        "araştırma problemi",
+        "kapsam/yıl/dil",
+        "anahtar kavramlar"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: araştırma problemi, kapsam/yıl/dil, anahtar kavramlar.\nGÖREV: Sorguları TR ve EN kavram aileleriyle kur; eşanlamlıları, anahtar kelime kümelerini, veri tabanı ve tarih kapsamını ayır; gerçekte arama yapılmamışsa literatür bulunmuş gibi davranma.\nBEKLENEN ÇIKTI: TR-EN Boolean sorgular; veri tabanı seçim gerekçesi; tarama günlüğü şablonu.\nZORUNLU KONTROLLER: Anahtar sözcüklerin kapsayıcılığı; arama tarihi ve platformu; uygun dahil/dışla koşulları.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "TR-EN Boolean sorgular",
+        "veri tabanı seçim gerekçesi",
+        "tarama günlüğü şablonu"
+      ],
+      "quality_checks": [
+        "Anahtar sözcüklerin kapsayıcılığı",
+        "arama tarihi ve platformu",
+        "uygun dahil/dışla koşulları"
+      ],
+      "risk_level": "medium",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWL-02",
+      "category": "literature",
+      "title_tr": "Kayıt eleme ve kapsam değerlendirme",
+      "required_inputs": [
+        "CSV/bibliyografik kayıtlar",
+        "araştırma sorusu",
+        "dahil/dışla ölçütleri"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: CSV/bibliyografik kayıtlar, araştırma sorusu, dahil/dışla ölçütleri.\nGÖREV: Kayıtları başlık/özet düzeyinde değerlendir, her kararın gerekçesini yaz; erişilemeyen tam metni okundu diye gösterme.\nBEKLENEN ÇIKTI: dahil-kararsız-dışla tablosu; gerekçe kayıtları; tam metin ihtiyaç listesi.\nZORUNLU KONTROLLER: Yinelenen kayıtlar; karar ölçütlerinin tutarlılığı; gerçek eleme sayıları.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "dahil-kararsız-dışla tablosu",
+        "gerekçe kayıtları",
+        "tam metin ihtiyaç listesi"
+      ],
+      "quality_checks": [
+        "Yinelenen kayıtlar",
+        "karar ölçütlerinin tutarlılığı",
+        "gerçek eleme sayıları"
+      ],
+      "risk_level": "medium",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWL-03",
+      "category": "literature",
+      "title_tr": "Kanıt matrisi",
+      "required_inputs": [
+        "doğrulanmış makale/PDF",
+        "araştırma soruları"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: doğrulanmış makale/PDF, araştırma soruları.\nGÖREV: Her kaynağı amaç, teori, örneklem, yöntem, analiz, bulgu, sınırlılık ve ileri araştırma önerilerine ayır; sayfa numarasını ancak belgeyi doğrulayabilirsen kullan.\nBEKLENEN ÇIKTI: kaynak-iddia-kanıt matrisi; metodolojik karşılaştırma; boşluk haritası.\nZORUNLU KONTROLLER: Kaynak bazında kanıt izi; ampirik/kuramsal ayrımı; bağlamdan koparma riski.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "kaynak-iddia-kanıt matrisi",
+        "metodolojik karşılaştırma",
+        "boşluk haritası"
+      ],
+      "quality_checks": [
+        "Kaynak bazında kanıt izi",
+        "ampirik/kuramsal ayrımı",
+        "bağlamdan koparma riski"
+      ],
+      "risk_level": "medium",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWL-04",
+      "category": "literature",
+      "title_tr": "Eleştirel literatür sentezi",
+      "required_inputs": [
+        "kaynak-iddia-kanıt matrisi",
+        "kuramsal çerçeve",
+        "araştırma sorusu"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: kaynak-iddia-kanıt matrisi, kuramsal çerçeve, araştırma sorusu.\nGÖREV: Çalışmaları tek tek özetlemek yerine iddialara göre karşılaştır; görüş birliği, çatışmalar, metodolojik farklılıklar ve araştırma boşluğunu belirt.\nBEKLENEN ÇIKTI: tematik sentez; kuramsal karşılaştırma; kanıta bağlı araştırma boşluğu.\nZORUNLU KONTROLLER: Yargı için kaynak kapsamı; çelişkinin gerekçesi; genelleme sınırları.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "tematik sentez",
+        "kuramsal karşılaştırma",
+        "kanıta bağlı araştırma boşluğu"
+      ],
+      "quality_checks": [
+        "Yargı için kaynak kapsamı",
+        "çelişkinin gerekçesi",
+        "genelleme sınırları"
+      ],
+      "risk_level": "medium",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWL-05",
+      "category": "literature",
+      "title_tr": "DOI ve bibliyografik doğrulama",
+      "required_inputs": [
+        "kaynak listesi",
+        "varsa DOI/URL"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: kaynak listesi, varsa DOI/URL.\nGÖREV: Doğrulama yapılabilecek Crossref/OpenAlex/resmî yayıncı alanlarını tanımla; yalnızca erişilebilir kayıtları doğrulandı diye işaretle, indeksleme statüsünü ayrıca açık bir doğrulama gereksinimi say.\nBEKLENEN ÇIKTI: doğrulama durum tablosu; çakışan kayıtlar; düzeltme listesi.\nZORUNLU KONTROLLER: DOI çözümlenmesi; başlık-yazar-yıl eşleşmesi; Scopus/WoS iddiası için bağımsız teyit.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "doğrulama durum tablosu",
+        "çakışan kayıtlar",
+        "düzeltme listesi"
+      ],
+      "quality_checks": [
+        "DOI çözümlenmesi",
+        "başlık-yazar-yıl eşleşmesi",
+        "Scopus/WoS iddiası için bağımsız teyit"
+      ],
+      "risk_level": "high",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWR-01",
+      "category": "research-design",
+      "title_tr": "Problem, amaç ve araştırma soruları",
+      "required_inputs": [
+        "araştırma konusu",
+        "bağlam ve kapsam",
+        "literatür bulguları"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: araştırma konusu, bağlam ve kapsam, literatür bulguları.\nGÖREV: Araştırma problemini özgül bilgi eksikliği olarak tanımla; amacı ve soruları bu probleme bağla, doğrudan doğrulanamayan özgünlük iddiasından kaçın.\nBEKLENEN ÇIKTI: problem paragrafı; amaç cümlesi; araştırma soruları; sav-kaynak uyum denetimi.\nZORUNLU KONTROLLER: Yanıtlanabilirlik; kapsam uyumu; araştırma boşluğu kanıtı.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "problem paragrafı",
+        "amaç cümlesi",
+        "araştırma soruları",
+        "sav-kaynak uyum denetimi"
+      ],
+      "quality_checks": [
+        "Yanıtlanabilirlik",
+        "kapsam uyumu",
+        "araştırma boşluğu kanıtı"
+      ],
+      "risk_level": "medium",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWR-02",
+      "category": "research-design",
+      "title_tr": "Soru–yöntem–veri–analiz uyumu",
+      "required_inputs": [
+        "araştırma soruları",
+        "örneklem/evren",
+        "erişim olanağı"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: araştırma soruları, örneklem/evren, erişim olanağı.\nGÖREV: Her araştırma sorusunu ölçülebilir/gözlemlenebilir veri, veri toplama yöntemi, analiz tekniği ve gerekçeli sınırlarla eşleştir.\nBEKLENEN ÇIKTI: uyum matrisi; geçerlik ve güvenirlik riskleri; etik gereklilikler.\nZORUNLU KONTROLLER: Veri-soru uyumu; yöntem gerekçesi; nedensellik sınırları.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "uyum matrisi",
+        "geçerlik ve güvenirlik riskleri",
+        "etik gereklilikler"
+      ],
+      "quality_checks": [
+        "Veri-soru uyumu",
+        "yöntem gerekçesi",
+        "nedensellik sınırları"
+      ],
+      "risk_level": "high",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWR-03",
+      "category": "research-design",
+      "title_tr": "Kuramsal çerçeve karşılaştırması",
+      "required_inputs": [
+        "araştırma konusu",
+        "doğrulanmış kurucu/güncel kaynaklar"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: araştırma konusu, doğrulanmış kurucu/güncel kaynaklar.\nGÖREV: Rekabet eden kuramsal yaklaşımları önermeleri, açıklama kapsamı ve eleştirileri açısından karşılaştır; temel kavramları ilk kullanımda tanımla.\nBEKLENEN ÇIKTI: kuram-kavram tablosu; seçim gerekçesi; alternatif açıklamalar.\nZORUNLU KONTROLLER: Kuram ile değişken ilişkisinin açıklığı; farklı yaklaşım dengesi; doğrudan alıntıda sayfa doğrulama.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "kuram-kavram tablosu",
+        "seçim gerekçesi",
+        "alternatif açıklamalar"
+      ],
+      "quality_checks": [
+        "Kuram ile değişken ilişkisinin açıklığı",
+        "farklı yaklaşım dengesi",
+        "doğrudan alıntıda sayfa doğrulama"
+      ],
+      "risk_level": "medium",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWR-04",
+      "category": "research-design",
+      "title_tr": "Görsel iletişim ve göstergebilim yöntemi",
+      "required_inputs": [
+        "görsel veri kümesi",
+        "araştırma sorusu",
+        "seçilen kuramsal yaklaşım"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: görsel veri kümesi, araştırma sorusu, seçilen kuramsal yaklaşım.\nGÖREV: Görsel/verbal öğeleri analiz birimine dönüştür; denotasyon-konotasyon ve bağlamsal yorum arasındaki farkı belirt; yorumları gözleme dayalı bulgularla karıştırma.\nBEKLENEN ÇIKTI: göstergebilim kodlama şeması; örnek analiz matrisi; yorumlama sınırları.\nZORUNLU KONTROLLER: Kod tanımlarının tekrar üretilebilirliği; yorumlayıcı konum; görsel kullanım hakkı.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "göstergebilim kodlama şeması",
+        "örnek analiz matrisi",
+        "yorumlama sınırları"
+      ],
+      "quality_checks": [
+        "Kod tanımlarının tekrar üretilebilirliği",
+        "yorumlayıcı konum",
+        "görsel kullanım hakkı"
+      ],
+      "risk_level": "medium",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWR-05",
+      "category": "research-design",
+      "title_tr": "Nitel analiz protokolü",
+      "required_inputs": [
+        "görüşme/gözlem/metin veri tanımı",
+        "araştırma soruları"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: görüşme/gözlem/metin veri tanımı, araştırma soruları.\nGÖREV: Ön kodlar veya açık kodlama için gerekçeli plan tasarla; tematik analizde olgu-bulguyu araştırmacı yorumundan ayır; etik ve onam risklerini göster.\nBEKLENEN ÇIKTI: kod kitabı taslağı; analiz adımları; inandırıcılık ve doğrulama denetimi.\nZORUNLU KONTROLLER: Kodlama izi; gizlilik; veri doygunluğu iddiasının dayanağı.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "kod kitabı taslağı",
+        "analiz adımları",
+        "inandırıcılık ve doğrulama denetimi"
+      ],
+      "quality_checks": [
+        "Kodlama izi",
+        "gizlilik",
+        "veri doygunluğu iddiasının dayanağı"
+      ],
+      "risk_level": "high",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWR-06",
+      "category": "research-design",
+      "title_tr": "Nicel analiz ve değişken planı",
+      "required_inputs": [
+        "araştırma soruları/hipotezler",
+        "veri türleri",
+        "örneklem planı"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: araştırma soruları/hipotezler, veri türleri, örneklem planı.\nGÖREV: Değişkenleri operasyonelleştir; dağılım, varsayım ve araştırma tasarımına göre test seçeneklerini kıyasla; önceden belirlenmiş analizleri post hoc kararlarla karıştırma.\nBEKLENEN ÇIKTI: değişken ve ölçek tablosu; analiz planı; varsayım kontrolleri.\nZORUNLU KONTROLLER: Test varsayımları; etki büyüklüğü ve belirsizlik; çoklu karşılaştırma.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "değişken ve ölçek tablosu",
+        "analiz planı",
+        "varsayım kontrolleri"
+      ],
+      "quality_checks": [
+        "Test varsayımları",
+        "etki büyüklüğü ve belirsizlik",
+        "çoklu karşılaştırma"
+      ],
+      "risk_level": "high",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWW-01",
+      "category": "writing",
+      "title_tr": "Makale iskeleti ve katkı haritası",
+      "required_inputs": [
+        "başlık/konu",
+        "hedef dergi ve tür",
+        "araştırma sorusu",
+        "gerçek veri durumu"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: başlık/konu, hedef dergi ve tür, araştırma sorusu, gerçek veri durumu.\nGÖREV: Kullanıcının başlık ve kapsamını değiştirmeden bölüm taslağı üret; her bölüme yalnızca kanıtı bulunan veya daha sonra doldurulacak bileşenleri yerleştir.\nBEKLENEN ÇIKTI: bölüm planı; sav-kanıt eşlemesi; eksik bilgi listesi.\nZORUNLU KONTROLLER: Dergi yönergeleri; tartışma-bulgu ayrımı; veri olmadan sonuç üretmeme.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "bölüm planı",
+        "sav-kanıt eşlemesi",
+        "eksik bilgi listesi"
+      ],
+      "quality_checks": [
+        "Dergi yönergeleri",
+        "tartışma-bulgu ayrımı",
+        "veri olmadan sonuç üretmeme"
+      ],
+      "risk_level": "medium",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWW-02",
+      "category": "writing",
+      "title_tr": "Özet ve anahtar kelimeler",
+      "required_inputs": [
+        "doğrulanmış problem/yöntem/bulgu/sonuç",
+        "hedef dergi uzunluğu"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: doğrulanmış problem/yöntem/bulgu/sonuç, hedef dergi uzunluğu.\nGÖREV: Özeti yalnızca tamamlanmış çalışmanın bilinen unsurlarıyla oluştur; eksik bulgu için yer tutucu bırak, sayısal çıktı üretme.\nBEKLENEN ÇIKTI: yapılandırılmış/yapılandırılmamış özet; anahtar kelimeler; kelime sayısı.\nZORUNLU KONTROLLER: Bulgular veriyle uyumlu; yenilik ifadesi ölçülü; dergi kelime sınırı.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "yapılandırılmış/yapılandırılmamış özet",
+        "anahtar kelimeler",
+        "kelime sayısı"
+      ],
+      "quality_checks": [
+        "Bulgular veriyle uyumlu",
+        "yenilik ifadesi ölçülü",
+        "dergi kelime sınırı"
+      ],
+      "risk_level": "medium",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWW-03",
+      "category": "writing",
+      "title_tr": "Girişin argümantatif kurgusu",
+      "required_inputs": [
+        "problem ve amaç",
+        "kanıt matrisi",
+        "hedef okur"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: problem ve amaç, kanıt matrisi, hedef okur.\nGÖREV: Genelden özele boş retorik yerine literatürün tartışmalı savlarından probleme ilerleyen giriş yaz; her iddianın hangi kaynağa dayandığını işaretle.\nBEKLENEN ÇIKTI: giriş taslağı; paragraf-işlev haritası; kaynak denetimi.\nZORUNLU KONTROLLER: Kaynak ve sav bağlantısı; araştırma boşluğu kanıtı; amaç ile bitiş.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "giriş taslağı",
+        "paragraf-işlev haritası",
+        "kaynak denetimi"
+      ],
+      "quality_checks": [
+        "Kaynak ve sav bağlantısı",
+        "araştırma boşluğu kanıtı",
+        "amaç ile bitiş"
+      ],
+      "risk_level": "medium",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWW-04",
+      "category": "writing",
+      "title_tr": "Bulguların veriye bağlı yazımı",
+      "required_inputs": [
+        "tablolar/grafikler/kodlanmış temalar",
+        "analiz planı"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: tablolar/grafikler/kodlanmış temalar, analiz planı.\nGÖREV: Yalnızca sağlanan analiz çıktılarını anlat; veri olmayan yerde sayı, görüşmeci ifadesi, tema sıklığı veya p değeri uydurma.\nBEKLENEN ÇIKTI: bulgu anlatımı; tablo/şekil referansları; yorumdan arındırma.\nZORUNLU KONTROLLER: Sayı-kaynak izlenebilirliği; çelişkili çıktı taraması; tartışma cümlelerinin çıkarılması.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "bulgu anlatımı",
+        "tablo/şekil referansları",
+        "yorumdan arındırma"
+      ],
+      "quality_checks": [
+        "Sayı-kaynak izlenebilirliği",
+        "çelişkili çıktı taraması",
+        "tartışma cümlelerinin çıkarılması"
+      ],
+      "risk_level": "high",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWW-05",
+      "category": "writing",
+      "title_tr": "Tartışma ve alternatif açıklamalar",
+      "required_inputs": [
+        "doğrulanmış bulgular",
+        "literatür kanıt matrisi"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: doğrulanmış bulgular, literatür kanıt matrisi.\nGÖREV: Her bulguyu benzer ve karşıt yayınlarla eşleştir; uyum/uyumsuzluğa alternatif açıklamalar, örneklem ve yöntem kısıtları sun.\nBEKLENEN ÇIKTI: karşılaştırmalı tartışma; yorum sınırları; literatür uyuşmazlık tablosu.\nZORUNLU KONTROLLER: Sonuçlarla çelişmeme; nedensellik kontrolü; karşıt görüşe adil yer verme.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "karşılaştırmalı tartışma",
+        "yorum sınırları",
+        "literatür uyuşmazlık tablosu"
+      ],
+      "quality_checks": [
+        "Sonuçlarla çelişmeme",
+        "nedensellik kontrolü",
+        "karşıt görüşe adil yer verme"
+      ],
+      "risk_level": "medium",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWW-06",
+      "category": "writing",
+      "title_tr": "Sonuç ve özgün katkı",
+      "required_inputs": [
+        "tamamlanmış bulgular",
+        "araştırma soruları",
+        "sınırlılıklar"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: tamamlanmış bulgular, araştırma soruları, sınırlılıklar.\nGÖREV: Tekrar eden özet yerine araştırma sorularına verilmiş gerekçeli yanıtları ve desteklenen katkıyı açıkla; kanıt dışı önerileri hipotez olarak ayır.\nBEKLENEN ÇIKTI: sonuç bölümü; sınırlılıklar; ileriki araştırma.\nZORUNLU KONTROLLER: Yeni bulgu eklememe; katkı iddiasını kanıtlama; önerilerin kapsamı.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "sonuç bölümü",
+        "sınırlılıklar",
+        "ileriki araştırma"
+      ],
+      "quality_checks": [
+        "Yeni bulgu eklememe",
+        "katkı iddiasını kanıtlama",
+        "önerilerin kapsamı"
+      ],
+      "risk_level": "medium",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWW-07",
+      "category": "writing",
+      "title_tr": "Akademik Türkçe üslup revizyonu",
+      "required_inputs": [
+        "özgün metin",
+        "onaylı terminoloji"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: özgün metin, onaylı terminoloji.\nGÖREV: Klişe ve gereksiz tamlamaları azalt; her paragrafı tek ana sav etrafında kur; içerik eklemeden açıklığı artır; revizyon gerekçelerini belirt.\nBEKLENEN ÇIKTI: revize metin; değişiklik gerekçeleri; anlam korunumu notu.\nZORUNLU KONTROLLER: Yazar savı korunmuş mu; atıflar korunmuş mu; yapay kesinlik eklenmemiş mi.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "revize metin",
+        "değişiklik gerekçeleri",
+        "anlam korunumu notu"
+      ],
+      "quality_checks": [
+        "Yazar savı korunmuş mu",
+        "atıflar korunmuş mu",
+        "yapay kesinlik eklenmemiş mi"
+      ],
+      "risk_level": "medium",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWW-08",
+      "category": "writing",
+      "title_tr": "TR–EN akademik çeviri ve terminoloji",
+      "required_inputs": [
+        "kaynak metin",
+        "alan sözlüğü",
+        "İngilizce varyant tercihi"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: kaynak metin, alan sözlüğü, İngilizce varyant tercihi.\nGÖREV: Terimleri disipline uygun aktar; iddiaları, sayıları, atıfları ve kiplik düzeylerini değiştirme; belirsiz karşılıkları seçenekleriyle sun.\nBEKLENEN ÇIKTI: tam çeviri; terim eşleştirme tablosu; kontrol notları.\nZORUNLU KONTROLLER: Kaynak anlamı; sayılar ve özel adlar; atıf eşleşmesi.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "tam çeviri",
+        "terim eşleştirme tablosu",
+        "kontrol notları"
+      ],
+      "quality_checks": [
+        "Kaynak anlamı",
+        "sayılar ve özel adlar",
+        "atıf eşleşmesi"
+      ],
+      "risk_level": "medium",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWW-09",
+      "category": "writing",
+      "title_tr": "APA 7 atıf-kaynakça tutarlılığı",
+      "required_inputs": [
+        "makalenin tam metni",
+        "kaynakça",
+        "varsa DOI/URL"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: makalenin tam metni, kaynakça, varsa DOI/URL.\nGÖREV: Metin içi atıfları bibliyografya ile karşılıklı eşleştir; biçim kusurlarını göster; doğrulanmamış DOI üretme, doğrudan alıntıda sayfa gereğini işaretle.\nBEKLENEN ÇIKTI: eksik/karşılıksız kaynak tablosu; APA 7 kontrol raporu; düzeltme önerileri.\nZORUNLU KONTROLLER: Yazar/yıl eşleşmesi; başlık/DOI doğrulaması; doğrudan alıntı sayfası.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "eksik/karşılıksız kaynak tablosu",
+        "APA 7 kontrol raporu",
+        "düzeltme önerileri"
+      ],
+      "quality_checks": [
+        "Yazar/yıl eşleşmesi",
+        "başlık/DOI doğrulaması",
+        "doğrudan alıntı sayfası"
+      ],
+      "risk_level": "high",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWQ-01",
+      "category": "quality-review",
+      "title_tr": "Q1 düzeyi kör hakem simülasyonu",
+      "required_inputs": [
+        "makale tam metni",
+        "hedef dergi kapsamı",
+        "yazarın bildirdiği yöntem ve veriler"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: makale tam metni, hedef dergi kapsamı, yazarın bildirdiği yöntem ve veriler.\nGÖREV: Metni özgün katkı, kuramsal tutarlılık, örneklem, analiz, araştırma etiği ve sonuç savunulabilirliği açısından değerlendir; gerçek hakem değerlendirmesi yaptığın iddiasından kaçın.\nBEKLENEN ÇIKTI: majör/minör sorunlar; önceliklendirilmiş revizyon planı; kanıt gerektiren iddialar.\nZORUNLU KONTROLLER: Yöntem değerlendirme ölçütleri; bulgu-yorum farkı; desteklenmeyen genellemeler.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "majör/minör sorunlar",
+        "önceliklendirilmiş revizyon planı",
+        "kanıt gerektiren iddialar"
+      ],
+      "quality_checks": [
+        "Yöntem değerlendirme ölçütleri",
+        "bulgu-yorum farkı",
+        "desteklenmeyen genellemeler"
+      ],
+      "risk_level": "high",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWP-01",
+      "category": "project",
+      "title_tr": "Araştırma proje önerisi ve iş paketleri",
+      "required_inputs": [
+        "çağrı metni/başvuru formatı",
+        "araştırma problemi",
+        "ekip/altyapı",
+        "bütçe ve takvim verileri"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: çağrı metni/başvuru formatı, araştırma problemi, ekip/altyapı, bütçe ve takvim verileri.\nGÖREV: Resmî program koşullarına bağlı kalarak özgün değer, yöntem, iş paketleri, riskler ve çıktı gösterge planı üret; erişilmeyen resmî koşulları varsayım diye işaretle.\nBEKLENEN ÇIKTI: proje amaçları; iş paketi çizelgesi; risk-önlem tablosu; başvuru kontrol listesi.\nZORUNLU KONTROLLER: Çağrı sürümü; bütçe verisi kaynağı; ölçülebilir başarı ölçütleri.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "proje amaçları",
+        "iş paketi çizelgesi",
+        "risk-önlem tablosu",
+        "başvuru kontrol listesi"
+      ],
+      "quality_checks": [
+        "Çağrı sürümü",
+        "bütçe verisi kaynağı",
+        "ölçülebilir başarı ölçütleri"
+      ],
+      "risk_level": "high",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    },
+    {
+      "id": "AWP-02",
+      "category": "project",
+      "title_tr": "Araştırma ilerleme ve revizyon planı",
+      "required_inputs": [
+        "güncel taslak",
+        "hedef tarih",
+        "tamamlanan/eksik işler"
+      ],
+      "prompt_tr": "ROL: Doktora sonrası düzeyde disiplinler arası akademik araştırma editörü ve yöntem denetçisi.\nGİRDİLER: güncel taslak, hedef tarih, tamamlanan/eksik işler.\nGÖREV: Eksikleri kanıt, yöntem ve yazım açısından sınıflandır; bağımlılıkları ve teslimatı belirle; gerçekle uyuşmayan süre tahmini yapma.\nBEKLENEN ÇIKTI: öncelikli yapılacak işler; dosya bazında revizyon çizelgesi; bitirme kriterleri.\nZORUNLU KONTROLLER: İş bağımlılığı; görev-çıktı uyumu; açık riskler.\nDEĞİŞMEZ İLKELER: Akademik doğruluk için yalnızca sağlanan belgelerden veya açıkça doğrulanmış kaynaklardan hareket et. Kaynak, DOI, yazar, yıl, sayfa numarası, bulgu ya da nicel sonuç uydurma. Eksik veriyi [DOĞRULANMADI] olarak ayır. Nedensellik yalnızca çalışma tasarımı destekliyorsa kur. Kullanıcının onaylı terminolojisini ve araştırma kararlarını koru. Metin içi atıfları APA 7 kaynakça kayıtlarıyla karşılaştır. Kanıt, yorum ve öneriyi ayrı belirt.",
+      "expected_outputs": [
+        "öncelikli yapılacak işler",
+        "dosya bazında revizyon çizelgesi",
+        "bitirme kriterleri"
+      ],
+      "quality_checks": [
+        "İş bağımlılığı",
+        "görev-çıktı uyumu",
+        "açık riskler"
+      ],
+      "risk_level": "medium",
+      "origin": "original-adaptation",
+      "requires_live_verification": "References, DOI, index status and contemporary evidence where relevant"
+    }
+  ]
+}
