@@ -1,0 +1,10 @@
+{
+  "name": "pyalex",
+  "repo": "J535D165/pyalex",
+  "url": "https://github.com/J535D165/pyalex",
+  "category": "academic-research",
+  "priority": 1,
+  "execution_mode": "python-package",
+  "purpose_tr": "OpenAlex yayın, yazar, kurum ve kaynak bibliyografik verilerinin Python üzerinden keşfi; canlı kullanım için API anahtarı ve ağ bağlantısı gerekir.",
+  "local_integration_guide": "PYALEX_START.md"
+}

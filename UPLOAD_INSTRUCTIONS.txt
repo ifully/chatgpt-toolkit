@@ -1,0 +1,9 @@
+GitHub yükleme (mevcut chatgpt-toolkit deposu):
+1. ZIP dosyasını çıkarın.
+2. https://github.com/ifully/chatgpt-toolkit adresinde Add file → Upload files seçin.
+3. ZIP'in içindeki PYALEX_START.md dosyasını ve integrations/pyalex klasör yapısını sürükleyerek yükleyin.
+4. Commit directly to main → Commit changes.
+5. Kontrol: https://github.com/ifully/chatgpt-toolkit/blob/main/PYALEX_START.md
+
+Bu paket eski dosyaları değiştirmez. tools.yaml/tools.json kök kataloğu da otomatik güncellemez; catalog-entry.json eklenebilecek kayıt içindir.
+API anahtarını hiçbir şekilde GitHub'a yüklemeyin. PyAlex kaynak kodunu bu depoya kopyalamak gerekmez.
