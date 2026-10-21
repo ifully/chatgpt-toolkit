@@ -1,0 +1,11 @@
+GITHUB ÜZERİNDEN YÜKLEME — chatgpt-toolkit
+
+1. Bu ZIP dosyasını bilgisayarınızda bir klasöre çıkarın.
+2. https://github.com/ifully/chatgpt-toolkit adresini açın.
+3. Add file → Upload files seçin.
+4. Çıkardığınız klasör içindeki dosyaları ve `categories` ile `playbooks` klasörlerini yükleme alanına sürükleyin.
+5. Alt bölümde Commit changes seçin.
+6. `START_HERE.md` dosyasını açın. (Mevcut README.md korunur.)
+7. İsterseniz README_UPGRADE.md içindeki örnek metni depo README.md dosyasına yapıştırın.
+
+NOT: ZIP dosyasını GitHub'a tek bir ZIP dosyası olarak yüklemek, içindeki yönergeleri ayrı dosyalar hâlinde okunabilir yapmaz. Önce ZIP'i açmanız gerekir.
