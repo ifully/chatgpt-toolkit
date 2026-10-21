@@ -1,0 +1,327 @@
+{
+  "schema_version": "1.0.0",
+  "created_on": "2026-10-21",
+  "language": "tr",
+  "purpose": "User-owned original academic and development prompt workflows for ChatGPT Web, based on a separate review of AiShort, not a copy of its prompt library.",
+  "upstream": {
+    "repository": "rockbenben/ChatGPT-Shortcut",
+    "url": "https://github.com/rockbenben/ChatGPT-Shortcut",
+    "license_observed_in_uploaded_archive": "MIT",
+    "source_archived_version": "User-uploaded source ZIP; package.json version 4.5.1"
+  },
+  "usage_note": "Catalog does not auto-install AiShort or permanently change ChatGPT. Source citations, data and all outputs must be checked per task.",
+  "prompts": [
+    {
+      "id": "AW-01",
+      "title": "Akademik metin planı",
+      "category": "academic-writing",
+      "purpose": "Makaleyi veri ve yöntemle uyumlu bir iskelete yerleştirme",
+      "required_inputs": [
+        "Araştırma başlığı",
+        "Araştırma problemi",
+        "Amaç ve sorular",
+        "Yöntem",
+        "Veri/bulgu durumu"
+      ],
+      "prompt": "Girdi olarak verdiğim araştırma konusu, problem, amaç, araştırma soruları, yöntem ve mevcut veri durumuyla sınırlı kal. Başlığı veya araştırma kararlarını değiştirme. IMRaD ya da belirttiğim dergi yapısına uyarlanmış bir bölüm planı üret. Her bölüm için: temel sav, gerekli kanıt türü, henüz eksik bilgi ve bölümden sonraki mantıksal geçişi belirt. Bulgular mevcut değilse bulgu icat etme; beklenen bulguları gerçekleşmiş gibi yazma. Kaynak gerekiyorsa aranacak kuramsal gelenekleri belirt fakat doğrulanmamış atıf üretme. Literatürde uzlaşı, çelişki ve araştırma boşluğu ayrımını kur.",
+      "quality_checks": [
+        "Araştırma sorusu-yöntem uyumu",
+        "Olmayan bulgu eklenmedi",
+        "Kaynakların doğrulama durumu açık"
+      ],
+      "outputs": [
+        "Bölüm planı",
+        "Argüman-kanıt matrisi",
+        "Eksik bilgi listesi"
+      ]
+    },
+    {
+      "id": "AW-02",
+      "title": "Akademik yeniden yazım",
+      "category": "academic-writing",
+      "purpose": "Mevcut metni savı koruyarak bilimsel Türkçeye uyarlama",
+      "required_inputs": [
+        "Değiştirilecek metin",
+        "Yayın türü ve hedef okur",
+        "Korunacak terminoloji"
+      ],
+      "prompt": "Aşağıdaki akademik metni içerik, kavram ve atıf anlamlarını koruyarak yeniden düzenle. Kullanıcının onayladığı başlık, kapsam, yöntem, sayısal değer ve terminolojiyi değiştirme. Her paragraf tek bir temel sav taşısın; kanıt ile yorumu ayır. Gereksiz genellemeleri, muğlak özneyi ve kalıp akademik ifadeleri temizle. Doğrudan alıntıları değiştirme; sayfa numarası eksikse belirt. Sonunda metne yeni bir olgusal iddia eklenip eklenmediğini ve kontrol gerektiren noktaları kısaca raporla.",
+      "quality_checks": [
+        "Özgün olgusal içerik korunmuş",
+        "Atıflar değişmedi",
+        "Yeni kanıtsız iddia yok"
+      ],
+      "outputs": [
+        "Revize metin",
+        "Değişiklik raporu"
+      ]
+    },
+    {
+      "id": "AW-03",
+      "title": "Hakem değerlendirmesi",
+      "category": "academic-writing",
+      "purpose": "Q1/WoS/Scopus standartlarına göre eleştirel değerlendirme",
+      "required_inputs": [
+        "Makalenin tam metni",
+        "Hedef dergi ve kapsam (biliniyorsa)"
+      ],
+      "prompt": "Verilen akademik metni anonim hakem mantığıyla eleştirel değerlendir. İddia-kanıt uyumu, özgün katkı, kuramsal derinlik, örneklem, yöntem, analiz, geçerlik/güvenirlik, araştırma etiği, sınırlılıklar ve APA 7 tutarlılığını ayrı başlıklarda incele. Sadece metinde gerçekten görülen sorunları raporla. Her bulgu için: metinden doğrulanabilir konum, sorunun önemi (kritik/majör/minör), somut revizyon önerisi ve yapılacak kontrol ver. Derginin kabul olasılığını tahmin etme.",
+      "quality_checks": [
+        "Eleştiriler metne dayanıyor",
+        "Veri dışı çıkarım yapılmadı",
+        "Öneriler uygulanabilir"
+      ],
+      "outputs": [
+        "Hakem raporu",
+        "Öncelikli revizyon sırası"
+      ]
+    },
+    {
+      "id": "AW-04",
+      "title": "Akademik TR–EN çeviri",
+      "category": "academic-writing",
+      "purpose": "Bilimsel çeviride kavramsal ve atıfsal sadakat",
+      "required_inputs": [
+        "Kaynak metin",
+        "Alan terminolojisi",
+        "Hedef İngilizce/Türkçe çeşidi"
+      ],
+      "prompt": "Metni hedef akademik dile çevir. Araştırma yöntemi, değişkenler, kuram adları, atıflar, sayılar, başlıklar, doğrudan alıntılar ve ihtiyat ifadelerini aynen koru. Yeni bilgi, kaynak veya açıklama ekleme. Alan yazınında karşılığı belirsiz terimler için kısa bir terim-karar tablosu oluştur ve çeviride tutarlı kullan. Terim kararlarının doğrulanması gerekiyorsa kesinmiş gibi sunma.",
+      "quality_checks": [
+        "Yöntem ve nicel veriler korunmuş",
+        "Kaynak ekleme/çıkarma yok",
+        "Terimler tutarlı"
+      ],
+      "outputs": [
+        "Çeviri",
+        "Terim kararları"
+      ]
+    },
+    {
+      "id": "LR-01",
+      "title": "Literatür sorgu stratejisi",
+      "category": "literature-and-evidence",
+      "purpose": "İzlenebilir tarama protokolü oluşturma",
+      "required_inputs": [
+        "Konu ve araştırma soruları",
+        "Dahil etme/dışlama ölçütleri",
+        "Tarih ve dil sınırları",
+        "Veritabanları"
+      ],
+      "prompt": "Araştırma sorularıyla ilişkili Türkçe ve İngilizce eşanlamlı anahtar kelimeleri, kapsam dışı kalan kavramları ve Boole sorgu dizelerini oluştur. Kaynak türü ve zaman sınırlarını gerekçelendir. Scopus, WoS, OpenAlex ve Crossref kayıtlarını aynı indeksmiş gibi gösterme; her birinin kapsam farkını belirt. Canlı erişimin yoksa sonuç sayısı, çalışmanın varlığı veya DOI uydurma. Çıktıyı yeniden üretilebilir tarama günlüğü, eleme ölçütleri ve kaynak-doğrulama alanlarıyla ver.",
+      "quality_checks": [
+        "Veritabanı kapsama sınırları belirtilmiş",
+        "Sorgular tekrar edilebilir",
+        "Sayı/DOI uydurulmadı"
+      ],
+      "outputs": [
+        "Sorgular",
+        "Tarama günlüğü şablonu",
+        "Eleme ölçütleri"
+      ]
+    },
+    {
+      "id": "LR-02",
+      "title": "Kaynak ve DOI doğrulama",
+      "category": "literature-and-evidence",
+      "purpose": "Bibliyografik gerçeklik ve destek denetimi",
+      "required_inputs": [
+        "Bibliyografik kayıtlar veya URL listesi",
+        "Desteklenecek iddialar"
+      ],
+      "prompt": "Her bibliyografik kaydı mümkünse resmî DOI yönlendirmesi, yayıncı sayfası veya çapraz-veri hizmetiyle karşılaştır. Yazar, yıl, başlık, dergi, cilt, sayı, sayfa ve DOI alanlarını tek tek kontrol et. Birincil içerik erişilebilir değilse 'bibliyografik olarak doğrulandı; içerik iddiası doğrulanmadı' ayrımını açık tut. Verilen iddiayı gerçekten destekleyip desteklemediğini doğrulamadan atıf ilişkilendirme. APA 7 gösterimini ayrı üret; bulunamayan verileri boş bırak.",
+      "quality_checks": [
+        "Kaynağın varlığı ile iddia desteği ayrılmış",
+        "DOI tahmin edilmedi",
+        "Eksik alanlar işaretli"
+      ],
+      "outputs": [
+        "Kaynak-doğrulama tablosu",
+        "APA 7 düzeltmeleri",
+        "İddia-kaynak eşleşmesi"
+      ]
+    },
+    {
+      "id": "LR-03",
+      "title": "Literatür sentezi ve boşluk",
+      "category": "literature-and-evidence",
+      "purpose": "Kaynaklar arası karşılaştırmalı çözümleme",
+      "required_inputs": [
+        "Doğrulanmış makale listesi",
+        "Araştırma sorusu",
+        "Kaynaklardan bulgular veya özetler"
+      ],
+      "prompt": "Sağlanan doğrulanmış çalışmaların kuramlarını, araştırma tasarımlarını, örneklemlerini ve bulgularını karşılaştır. Aynı görüşü tekrarlayan kayıtları yığma. Destek düzeyini ve metodolojik sınırları göstererek uzlaşı, çelişki ve açıklanamayan boşlukları ayır. 'Literatürde hiç çalışma yoktur' gibi evrensel sonuçlar çıkarma. Kaynağı olmayan savları 'kanıt bekliyor' olarak işaretle. Sonuçta yanıtlanabilir yeni araştırma soruları öner.",
+      "quality_checks": [
+        "Her değerlendirme kaynakla eşleşiyor",
+        "Boşluk iddiası kapsamla sınırlı",
+        "Çelişkiler görünür"
+      ],
+      "outputs": [
+        "Sentez matrisi",
+        "Eleştirel tartışma",
+        "Araştırma boşluğu açıklaması"
+      ]
+    },
+    {
+      "id": "LR-04",
+      "title": "Sistematik derleme eleme planı",
+      "category": "literature-and-evidence",
+      "purpose": "Şeffaf sistematik derleme iş akışı",
+      "required_inputs": [
+        "Derleme sorusu",
+        "Veritabanları",
+        "Dahil etme/dışlama ölçütleri",
+        "Mevcut kayıt sayıları"
+      ],
+      "prompt": "Sistematik derleme için başlık/özet ve tam metin eleme prosedürü oluştur; gerekçe kodları, yinelenen kayıt çözümü, iki değerlendirici uzlaşısı ve veri çıkarım alanlarını belirt. PRISMA akışına ilişkin rakamları yalnızca sağlanan kayıtlardan hesapla; yapılmayan aşamaları tamamlanmış gibi yazma. Aktif öğrenme kullanılıyorsa bunun eleme kararı yerine önceliklendirme görevi üstlendiğini kaydet. Araştırma protokolü ile rapor edilen uygulamayı ayır.",
+      "quality_checks": [
+        "PRISMA sayıları izlenebilir",
+        "Gerçekleşmeyen eleme raporlanmamış",
+        "Karar günlüğü var"
+      ],
+      "outputs": [
+        "Eleme protokolü",
+        "Veri çıkarım şablonu",
+        "PRISMA veri gereksinimi"
+      ]
+    },
+    {
+      "id": "RP-01",
+      "title": "Araştırma yöntemi uyumu",
+      "category": "research-design",
+      "purpose": "Soru-yöntem-örneklem-analiz eşleştirmesi",
+      "required_inputs": [
+        "Amaç ve sorular",
+        "Hipotezler/değişkenler",
+        "Hedef kitle",
+        "Veri toplama araçları"
+      ],
+      "prompt": "Her araştırma sorusunu uygun araştırma deseni, örnekleme stratejisi, veri kaynağı, analiz yöntemi ve geçerlik/güvenirlik önlemleriyle eşleştir. Nedensellik iddiasını yalnızca tasarım destekliyorsa kullan. Ölçek geliştirme, etik izin, kişisel veri ve örneklem yeterliliğini gerektiği kadar tartış. Alternatif analizleri varsayımlarıyla karşılaştır. Eksik veriyi doldurmak yerine sorulması gereken soruları belirt.",
+      "quality_checks": [
+        "Nedensellik yanlış sunulmamış",
+        "Her sorunun analizi tanımlı",
+        "Etik ve sınırlılıklar ele alınmış"
+      ],
+      "outputs": [
+        "Yöntem uyum tablosu",
+        "Riskler",
+        "Eksik bilgiler"
+      ]
+    },
+    {
+      "id": "RP-02",
+      "title": "Proje önerisi tasarımı",
+      "category": "research-design",
+      "purpose": "BAP/TÜBİTAK benzeri başvuru yapıları için taslak",
+      "required_inputs": [
+        "Fon programı ve resmî çağrı metni",
+        "Proje konusu",
+        "Ekip ve süre",
+        "Bütçe kısıtları"
+      ],
+      "prompt": "Sağlanan resmî çağrı ve başvuru ölçütlerini değiştirmeden araştırma projesi taslağı geliştir. Problem, özgün değer, amaçlar, iş paketleri, yöntem, ölçülebilir çıktılar, riskler, zaman çizelgesi, etik ve yaygın etki arasında izlenebilir bağlantılar kur. Fon programının güncel koşulları verilmediyse varsayım olarak işaretle ve doğrulama iste. Bütçe kalemlerini para birimi ve gerekçeleriyle ayrı tablo halinde ver; gerçekçi veri olmadan kesin rakam üretme.",
+      "quality_checks": [
+        "Çağrı kriterleri izleniyor",
+        "İş paketleri ölçülebilir",
+        "Bütçe varsayımları açık"
+      ],
+      "outputs": [
+        "Proje önerisi iskeleti",
+        "İş paketi matrisi",
+        "Risk ve doğrulama listesi"
+      ]
+    },
+    {
+      "id": "RP-03",
+      "title": "Görsel iletişim ve göstergebilim araştırması",
+      "category": "research-design",
+      "purpose": "Nitel görsel çözümleme tasarımı",
+      "required_inputs": [
+        "Görsel nesne/korpus",
+        "Araştırma soruları",
+        "Kuramsal çerçeve",
+        "Örnekleme gerekçesi"
+      ],
+      "prompt": "Grafik tasarım ve görsel iletişim bağlamında göstergebilimsel/nitel analiz tasarla. Gösteren-gösterilen, düz/yan anlam, kod, bağlam, üretim ve alımlama düzeylerini seçtiğin kurama uygun ve birbirine karıştırmadan tanımla. Çözümleme birimi, kod defteri, karşılaştırma ölçütleri, karşıt örnek, araştırmacı konumlanışı ve yorum sınırlarını belirt. Görsellerden doğrudan görülemeyen niyet, tarihsel bağlam veya kullanıcı etkisi hakkında kanıtsız sonuç verme.",
+      "quality_checks": [
+        "Kuram-kod eşleşmesi açık",
+        "Görselden çıkarım sınırları korunmuş",
+        "Yorumlar kanıtlı"
+      ],
+      "outputs": [
+        "Analiz protokolü",
+        "Kodlama şeması",
+        "Geçerlik ve sınırlılık notu"
+      ]
+    },
+    {
+      "id": "SW-01",
+      "title": "Yazılım özellik spesifikasyonu",
+      "category": "software-and-projects",
+      "purpose": "Spec Kit tarzı gereksinimden teste izlenebilirlik",
+      "required_inputs": [
+        "Mevcut proje ve mimari",
+        "İstenen özellik",
+        "Korunacak işlevler",
+        "Dağıtım koşulları"
+      ],
+      "prompt": "Mevcut kod tabanındaki mimariyi ve kullanıcının korunmasını istediği kararları tespit etmeden yeni mimari varsayma. İstenen özelliği kullanıcı öykülerine, işlevsel ve işlevsel olmayan gereksinimlere, kabul ölçütlerine ve geri alma stratejisine ayır. Her kabul ölçütü için test tanımla. Değişiklikleri küçük ve bağımsız tut, geriye dönük uyumluluk ve veri taşıma risklerini ayrı raporla. Kod incelemeden uygulanmış veya test edilmiş gibi sunma.",
+      "quality_checks": [
+        "Mevcut davranış korunuyor",
+        "Kabul ölçütleri test edilebilir",
+        "Rollback tanımlı"
+      ],
+      "outputs": [
+        "Gereksinim dokümanı",
+        "Görev listesi",
+        "Test matrisi"
+      ]
+    },
+    {
+      "id": "SW-02",
+      "title": "Kod ve güvenlik incelemesi",
+      "category": "software-and-projects",
+      "purpose": "Bulgu temelli kod kalitesi ve güvenlik raporu",
+      "required_inputs": [
+        "Depo URL veya ZIP",
+        "Çalıştırılabilir test ortamı (varsa)",
+        "Kullanıcı hedefi"
+      ],
+      "prompt": "Sağlanan kaynak kodunu güvenlik, bakım maliyeti, veri doğrulama, kimlik doğrulama/yetkilendirme, üçüncü taraf bağımlılıklar, erişilebilirlik ve performans açısından incele. Bulguları dosya yolu ve mümkünse satır referansı ile sınıflandır. Doğrulanmamış açıkları kesin açık gibi sunma. Statik analiz ile dinamik test sonuçlarını ayır. En küçük güvenli düzeltme, olası yan etkiler ve tekrar testi öner. Sırları ve kişisel veriyi rapora kopyalama.",
+      "quality_checks": [
+        "Her bulgu kaynağa bağlı",
+        "Test edilen/edilmeyen ayrılmış",
+        "Hassas veriler korunmuş"
+      ],
+      "outputs": [
+        "Önceliklendirilmiş hata listesi",
+        "Önerilen düzeltme planı",
+        "Regresyon testleri"
+      ]
+    },
+    {
+      "id": "SW-03",
+      "title": "Araştırma veri analizi planı",
+      "category": "software-and-projects",
+      "purpose": "Yeniden üretilebilir veri çözümleme planı",
+      "required_inputs": [
+        "Veri sözlüğü",
+        "Araştırma sorusu",
+        "Örneklem ve toplama süreci",
+        "Eksik veriler"
+      ],
+      "prompt": "Verinin gözlemsel/deneysel yapısı, değişken düzeyleri, dağılım varsayımları, eksik veri mekanizması, olası karıştırıcılar ve örneklem kısıtları üzerinden analiz planı hazırla. Temizleme adımlarını ham veriden ayrıştır; tekrar üretilebilir kod, sürüm notu ve çıktı kontrolü öner. p değeri ile etki büyüklüğünü birbirine indirgeme. Veri verilmemişse istatistik, tablo veya grafik icat etme.",
+      "quality_checks": [
+        "Yöntem varsayımları raporlu",
+        "Analiz tekrarlanabilir",
+        "Uydurma istatistik yok"
+      ],
+      "outputs": [
+        "Analiz protokolü",
+        "Kod taslağı",
+        "Kontrol listesi"
+      ]
+    }
+  ]
+}

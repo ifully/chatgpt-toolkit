@@ -1,0 +1,11 @@
+AiShort ChatGPT Web modülünü yükleme:
+
+1. ZIP'i bir klasöre çıkarın.
+2. https://github.com/ifully/chatgpt-toolkit adresini açın.
+3. Add file > Upload files seçin.
+4. Bu klasörün içindeki `AISHORT_START.md`, `integrations` klasörü ve isteğe bağlı `HOW_TO_UPLOAD_AISHORT.txt` dosyasını sürükleyin.
+5. Değişiklikleri doğrudan `main` dalına Commit changes ile kaydedin.
+6. https://github.com/ifully/chatgpt-toolkit/blob/main/AISHORT_START.md bağlantısını açarak doğrulayın.
+
+DİKKAT: ZIP'i açmadan yüklemeyin; dosyaların ayrı ayrı okunabilmesi gerekir.
+`integrations/aishort/` diğer entegrasyon klasörlerinin üzerine yazmamalıdır.
