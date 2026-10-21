@@ -1,0 +1,30 @@
+{
+  "source": "example-gallery.openplan.json",
+  "output": "example-gallery.glb",
+  "scene_bounds_m": [
+    [
+      -0.1,
+      -7.1,
+      -0.06
+    ],
+    [
+      10.1,
+      0.1,
+      3.2
+    ]
+  ],
+  "geometries": 17,
+  "summary": {
+    "walls": 5,
+    "doors": 2,
+    "windows": 1,
+    "columns": 1
+  },
+  "warnings": [],
+  "limitations": [
+    "Floor slabs approximate centerline polygons",
+    "Doors and windows are openings without leaf/glazing detail",
+    "Materials are simple vertex colors, not photorealistic PBR",
+    "Curves, stairs and BIM semantics unsupported"
+  ]
+}

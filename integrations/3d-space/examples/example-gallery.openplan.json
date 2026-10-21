@@ -1,0 +1,163 @@
+{
+  "id": "example-exhibition-space",
+  "name": "Exhibition Space — Demonstration",
+  "description": "Original two-room 3D gallery plan for illustrating the ChatGPT Web geometry workflow.",
+  "activeFloorId": "f0",
+  "floors": [
+    {
+      "id": "f0",
+      "name": "Main Exhibition Floor",
+      "level": 0,
+      "elevation": 0,
+      "slabThickness": 6,
+      "walls": [
+        {
+          "id": "north",
+          "start": {
+            "x": 0,
+            "y": 0
+          },
+          "end": {
+            "x": 1000,
+            "y": 0
+          },
+          "thickness": 20,
+          "height": 320,
+          "color": "#e9e8e4"
+        },
+        {
+          "id": "east",
+          "start": {
+            "x": 1000,
+            "y": 0
+          },
+          "end": {
+            "x": 1000,
+            "y": 700
+          },
+          "thickness": 20,
+          "height": 320,
+          "color": "#e9e8e4"
+        },
+        {
+          "id": "south",
+          "start": {
+            "x": 1000,
+            "y": 700
+          },
+          "end": {
+            "x": 0,
+            "y": 700
+          },
+          "thickness": 20,
+          "height": 320,
+          "color": "#e9e8e4"
+        },
+        {
+          "id": "west",
+          "start": {
+            "x": 0,
+            "y": 700
+          },
+          "end": {
+            "x": 0,
+            "y": 0
+          },
+          "thickness": 20,
+          "height": 320,
+          "color": "#e9e8e4"
+        },
+        {
+          "id": "divider",
+          "start": {
+            "x": 600,
+            "y": 0
+          },
+          "end": {
+            "x": 600,
+            "y": 700
+          },
+          "thickness": 15,
+          "height": 320,
+          "color": "#e9e8e4"
+        }
+      ],
+      "doors": [
+        {
+          "id": "entry",
+          "wallId": "south",
+          "position": 0.78,
+          "width": 140,
+          "height": 230,
+          "type": "double",
+          "swingDirection": "left",
+          "flipSide": false
+        },
+        {
+          "id": "passage",
+          "wallId": "divider",
+          "position": 0.45,
+          "width": 160,
+          "height": 240,
+          "type": "opening"
+        }
+      ],
+      "windows": [
+        {
+          "id": "glazing",
+          "wallId": "north",
+          "position": 0.26,
+          "width": 250,
+          "height": 200,
+          "sillHeight": 75,
+          "type": "fixed"
+        }
+      ],
+      "rooms": [
+        {
+          "id": "r-main",
+          "name": "Exhibition A",
+          "walls": [
+            "west",
+            "north",
+            "south",
+            "divider"
+          ],
+          "floorTexture": "concrete",
+          "area": 42
+        },
+        {
+          "id": "r-second",
+          "name": "Exhibition B",
+          "walls": [
+            "divider",
+            "north",
+            "east",
+            "south"
+          ],
+          "floorTexture": "concrete",
+          "area": 28
+        }
+      ],
+      "columns": [
+        {
+          "id": "column01",
+          "position": {
+            "x": 800,
+            "y": 350
+          },
+          "shape": "square",
+          "diameter": 30,
+          "height": 320
+        }
+      ],
+      "furniture": [],
+      "stairs": [],
+      "annotations": [],
+      "textAnnotations": [],
+      "measurements": [],
+      "groups": [],
+      "guides": []
+    }
+  ]
+}

@@ -1,9 +1,10 @@
-GitHub yükleme (mevcut chatgpt-toolkit deposu):
-1. ZIP dosyasını çıkarın.
-2. https://github.com/ifully/chatgpt-toolkit adresinde Add file → Upload files seçin.
-3. ZIP'in içindeki PYALEX_START.md dosyasını ve integrations/pyalex klasör yapısını sürükleyerek yükleyin.
-4. Commit directly to main → Commit changes.
-5. Kontrol: https://github.com/ifully/chatgpt-toolkit/blob/main/PYALEX_START.md
+chatgpt-toolkit / 3D Space modülünü yükleme
 
-Bu paket eski dosyaları değiştirmez. tools.yaml/tools.json kök kataloğu da otomatik güncellemez; catalog-entry.json eklenebilecek kayıt içindir.
-API anahtarını hiçbir şekilde GitHub'a yüklemeyin. PyAlex kaynak kodunu bu depoya kopyalamak gerekmez.
+1. ZIP dosyasını bilgisayarınıza indirin ve çıkarın.
+2. https://github.com/ifully/chatgpt-toolkit adresine gidin.
+3. Add file > Upload files açın.
+4. Çıkan klasörün içindeki THREED_SPACE_START.md ve integrations klasörünü GitHub'a sürükleyin.
+5. Commit directly to main > Commit changes yapın.
+6. https://github.com/ifully/chatgpt-toolkit/blob/main/THREED_SPACE_START.md dosyasını açarak kontrol edin.
+
+Uyarı: Bu paket Blender eklentilerinin kendisini içermez. Var olan Spec Kit, PyAlex, AiShort ve akademik yazım entegrasyonlarına dokunmayın.

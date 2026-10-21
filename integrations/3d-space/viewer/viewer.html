@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Space — Local GLB Preview</title><style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color-scheme:dark}*{box-sizing:border-box}
+body{margin:0;background:#121722;color:#edf0f7}header{padding:15px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:16px;background:#1c2332;border-bottom:1px solid #374052}
+header strong{font-size:18px}input{max-width:240px}label{font-size:14px}#status{font-size:12px;color:#9aaabd;flex:1}canvas{width:100%;height:calc(100vh - 72px);display:block}
+small{display:block;position:fixed;bottom:12px;left:16px;color:#b2bfca;background:#171b24bd;padding:7px 10px;border-radius:6px}
+</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.182.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.182.0/examples/jsm/"}}</script>
+</head><body>
+<header><strong>3D Space / GLB Viewer</strong><label>Yerel dosya <input type="file" id="file" accept=".glb,model/gltf-binary"></label><span id="status">GLB seçin. Model yükleme tarayıcınızda gerçekleşir.</span></header>
+<div id="viewport"></div><small>Fare: döndür • tekerlek: yakınlaştır • sağ tuş: kaydır. Three.js modülleri CDN'den gelir; internet gerekir.</small>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+const host=document.getElementById('viewport'),status=document.getElementById('status');
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x151b25);
+const camera=new THREE.PerspectiveCamera(45,1,0.01,3000);camera.position.set(11,-13,10);camera.up.set(0,0,1);
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;host.appendChild(renderer.domElement);
+const orbit=new OrbitControls(camera,renderer.domElement);orbit.target.set(0,0,0);orbit.enableDamping=true;orbit.update();
+scene.add(new THREE.HemisphereLight(0xffffff,0x52617a,2));const sun=new THREE.DirectionalLight(0xffffff,2);sun.position.set(5,-4,18);scene.add(sun);
+const grid=new THREE.GridHelper(30,30,0x485a6e,0x2b3647);grid.rotation.x=Math.PI/2;grid.position.z=-0.085;scene.add(grid);
+let model=null;
+function resize(){const w=host.clientWidth,h=host.clientHeight||600;camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h,false)}
+new ResizeObserver(resize).observe(host);resize();
+renderer.setAnimationLoop(()=>{orbit.update();renderer.render(scene,camera)});
+document.getElementById('file').addEventListener('change', async e=>{
+ const file=e.target.files?.[0];if(!file)return;status.textContent='Yükleniyor: '+file.name;
+ try{
+  const data=await file.arrayBuffer();const gltf=await new GLTFLoader().parseAsync(data,'');
+  if(model){scene.remove(model);model.traverse(o=>{if(o.geometry)o.geometry.dispose();if(o.material){for(const m of (Array.isArray(o.material)?o.material:[o.material]))m.dispose()}})}
+  model=gltf.scene;scene.add(model);const b=new THREE.Box3().setFromObject(model);if(b.isEmpty())throw Error('Boş model');
+  const center=b.getCenter(new THREE.Vector3()),size=b.getSize(new THREE.Vector3());const radius=Math.max(size.length()*0.8,2);
+  orbit.target.copy(center);camera.position.copy(center.clone().add(new THREE.Vector3(radius*0.7,-radius*0.85,radius*0.63)));camera.near=Math.max(.001,radius/2000);camera.far=radius*100;camera.updateProjectionMatrix();orbit.update();
+  status.textContent=`${file.name} — ${size.x.toFixed(2)} × ${size.y.toFixed(2)} × ${size.z.toFixed(2)} m`;
+ }catch(err){status.textContent='Yükleme hatası: '+err.message;console.error(err)}
+});
+</script></body></html>
