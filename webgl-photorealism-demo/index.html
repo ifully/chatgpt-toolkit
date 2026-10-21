@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WebGL Photorealism Toolkit</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #101318; color: white; font-family: system-ui; }
+    #scene { width: 100vw; height: 100vh; }
+    #controls {
+      position: fixed; left: 16px; top: 16px; z-index: 2;
+      padding: 16px; border-radius: 12px;
+      background: rgba(15,20,28,.88); backdrop-filter: blur(12px);
+      width: 230px;
+    }
+    label { display: block; font-size: 13px; margin-top: 14px; }
+    input, select { width: 100%; margin-top: 7px; }
+    small { color: #b9c3d0; }
+  </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+<div id="scene"></div>
+<div id="controls">
+  <strong>WebGL Photorealism</strong>
+  <p><small>Gallery Rendering v1.0</small></p>
+  <label>Pozlama
+    <input id="exposure" type="range" min=".35" max="2" step=".05" value="1">
+  </label>
+  <label>Işık yoğunluğu
+    <input id="lighting" type="range" min="0" max="10" step=".25" value="5">
+  </label>
+  <label>Gölge kalitesi
+    <select id="quality">
+      <option value="1024">Mobil</option>
+      <option value="2048" selected>Dengeli</option>
+      <option value="4096">Yüksek</option>
+    </select>
+  </label>
+  <p><small>Fareyle döndürün, tekerlekle yakınlaşın.</small></p>
+</div>
+<script type="module">
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
+
+const mount = document.querySelector("#scene");
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xd8d6d1);
+
+const camera = new THREE.PerspectiveCamera(
+  55, innerWidth / innerHeight, .1, 100
+);
+camera.position.set(7, 4.2, 9);
+
+const renderer = new THREE.WebGLRenderer({
+  antialias: true,
+  powerPreference: "high-performance"
+});
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1;
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+mount.appendChild(renderer.domElement);
+
+const pmrem = new THREE.PMREMGenerator(renderer);
+const room = new RoomEnvironment();
+const environment = pmrem.fromScene(room);
+scene.environment = environment.texture;
+scene.environmentIntensity = .45;
+room.dispose();
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(0, 1.6, 0);
+controls.enableDamping = true;
+controls.maxPolarAngle = Math.PI / 2 - .03;
+controls.minDistance = 2;
+controls.maxDistance = 18;
+controls.update();
+
+const material = (color, roughness = .85, metalness = 0) =>
+  new THREE.MeshStandardMaterial({ color, roughness, metalness });
+
+const plaster = material(0xeeeae2, .94);
+const floorMat = material(0xb6ada0, .68);
+const trim = material(0x33302e, .4, .18);
+
+function box(w, h, d, mat, x, y, z, shadow = false) {
+  const obj = new THREE.Mesh(new THREE.BoxGeometry(w,h,d), mat);
+  obj.position.set(x,y,z);
+  obj.castShadow = shadow;
+  obj.receiveShadow = true;
+  scene.add(obj);
+  return obj;
+}
+
+// 10 m × 8 m × 3.6 m örnek galeri
+box(10, .15, 8, floorMat, 0, -.075, 0);
+box(10, 3.6, .18, plaster, 0, 1.8, -4);
+box(.18, 3.6, 8, plaster, -5, 1.8, 0);
+box(.18, 3.6, 8, plaster, 5, 1.8, 0);
+
+// Referans eserler: dekoratif örnek veri
+const artworks = [
+  { x:-3.1, y:1.8, w:1.25, h:1.65, c:0xa16a55 },
+  { x:0, y:1.8, w:1.45, h:1.7, c:0x496b79 },
+  { x:3.1, y:1.8, w:1.25, h:1.65, c:0x9e9b65 }
+];
+
+for (const a of artworks) {
+  box(a.w+.1, a.h+.1, .075, trim, a.x, a.y, -3.83, true);
+  box(a.w, a.h, .012, material(a.c,.88), a.x, a.y, -3.78);
+}
+
+// Kaide
+box(.85, .85, .85, plaster, 1.5, .425, 1.5, true);
+
+const sphere = new THREE.Mesh(
+  new THREE.SphereGeometry(.28, 48, 32),
+  material(0x776b5c,.24,.55)
+);
+sphere.position.set(1.5,1.14,1.5);
+sphere.castShadow = true;
+scene.add(sphere);
+
+// Dolaylı ortam ışığı
+const ambient = new THREE.HemisphereLight(0xffffff,0xb6aca0,1.2);
+scene.add(ambient);
+
+// Ana yönlü ışık
+const sun = new THREE.DirectionalLight(0xfff2df,2.5);
+sun.position.set(3,7,5);
+sun.castShadow = true;
+sun.shadow.mapSize.set(2048,2048);
+sun.shadow.camera.left = -9;
+sun.shadow.camera.right = 9;
+sun.shadow.camera.top = 9;
+sun.shadow.camera.bottom = -9;
+sun.shadow.normalBias = .025;
+sun.shadow.bias = -.0001;
+sun.shadow.radius = 2;
+scene.add(sun);
+
+// Üç sanat eseri için spot ışığı
+const spots = [];
+for (const x of [-3.1, 0, 3.1]) {
+  const spot = new THREE.SpotLight(
+    0xffead1, 5, 10, Math.PI/7, .65, 1.4
+  );
+  spot.position.set(x,3.35,-1.3);
+  spot.target.position.set(x,1.7,-3.9);
+  spot.castShadow = true;
+  spot.shadow.mapSize.set(1024,1024);
+  spot.shadow.bias = -.0002;
+  scene.add(spot,spot.target);
+  spots.push(spot);
+}
+
+document.querySelector("#exposure").oninput = e => {
+  renderer.toneMappingExposure = Number(e.target.value);
+};
+document.querySelector("#lighting").oninput = e => {
+  spots.forEach(s => s.intensity = Number(e.target.value));
+};
+document.querySelector("#quality").onchange = e => {
+  const size = Number(e.target.value);
+  sun.shadow.mapSize.set(size,size);
+  sun.shadow.dispose();
+  spots.forEach(s => {
+    s.shadow.mapSize.set(Math.min(size,2048),Math.min(size,2048));
+    s.shadow.dispose();
+  });
+};
+
+addEventListener("resize", () => {
+  camera.aspect = innerWidth/innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth,innerHeight);
+});
+
+renderer.setAnimationLoop(() => {
+  controls.update();
+  renderer.render(scene,camera);
+});
+</script>
+</body>
+</html>
