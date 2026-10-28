@@ -1,7 +1,7 @@
-# Üçüncü taraf Agent Skills — dört arşivin entegrasyonu
+# Üçüncü taraf Agent Skills — beş arşivin entegrasyonu
 
 **İnceleme tarihi:** 28 Ekim 2026  
-**Kapsam:** Kullanıcı tarafından sağlanan dört ZIP arşivi  
+**Kapsam:** Kullanıcı tarafından sağlanan beş ZIP arşivi  
 **Yöntem:** ZIP bütünlük testi; README, lisans ve örnek `SKILL.md` incelemesi; katalog alanlarının eşleştirilmesi. Arşivlerdeki betikler **çalıştırılmadı**.
 
 Bu entegrasyon, `chatgpt-toolkit` deposunun mevcut **bağlantı ve çalışma akışı kataloğu** yaklaşımını korur. Hiçbir üçüncü taraf beceri kodu, medya dosyası, komut çalıştırıcısı veya geniş kaynak ağacı yeniden paketlenmemiştir.
@@ -12,10 +12,11 @@ Bu entegrasyon, `chatgpt-toolkit` deposunun mevcut **bağlantı ve çalışma ak
 | `agent-skills-main.zip` | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | `skills/web-design-guidelines/SKILL.md` | Kataloga eklendi; lisans kontrolü gerekli |
 | `claude-remotion-skill-main.zip` | [haidrrrry/claude-remotion-skill](https://github.com/haidrrrry/claude-remotion-skill) | `remotion-motion-graphics/SKILL.md` | Kataloga eklendi |
 | `skills-main.zip` | [trailofbits/skills](https://github.com/trailofbits/skills) | `plugins/differential-review/skills/differential-review/SKILL.md` | Kataloga eklendi; CC BY-SA 4.0 |
+| `scientific-agent-skills-main.zip` | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | `skills/literature-review/SKILL.md` | Kataloga eklendi; tekil beceri lisansı denetlenmeli |
 
 ## Dosyaların rolü
 
-- [`catalog.yaml`](catalog.yaml): Dört kaynağın makinece okunabilir seçki ve bağımlılık kayıtları.
+- [`catalog.yaml`](catalog.yaml): Beş kaynağın makinece okunabilir seçki ve bağımlılık kayıtları.
 - [`SOURCES_AND_LICENSES.md`](SOURCES_AND_LICENSES.md): Orijinal ZIP doğrulama özetleri, SHA-256 ve lisans sınırları.
 - [`../../categories/agent-skills.md`](../../categories/agent-skills.md): Okuyucu için kullanım karşılaştırması.
 - [`../../playbooks/skill-evaluation.md`](../../playbooks/skill-evaluation.md): Kurulumdan veya kod taşımadan önce uygulanacak denetim protokolü.
@@ -28,4 +29,4 @@ Bu entegrasyon, `chatgpt-toolkit` deposunun mevcut **bağlantı ve çalışma ak
 4. Kaynak revizyonunu sabitleyip, ayrı bir uygulama/proje ortamında kontrollü kurulum yapın.
 5. Davranışı örnek görevlerde test edin; katalogda "kurulu" olarak yalnızca gerçekten kuruluysa işaretleyin.
 
-**Not:** Bu işlem bir ChatGPT becerisi yüklemesi veya GitHub deposuna otomatik gönderim değildir. Kataloğun referans listesi dört kaynakla genişletilmiştir.
+**Not:** Bu işlem bir ChatGPT becerisi yüklemesi veya GitHub deposuna otomatik gönderim değildir. Kataloğun referans listesi beş kaynakla genişletilmiştir.

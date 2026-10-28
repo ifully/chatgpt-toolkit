@@ -4,6 +4,26 @@ mode: reference-only
 source: user-provided-zip-archives
 notes: 'Katalog dosyaları üçüncü taraf kaynak kodu içermez; hiçbir beceri yüklenmemiş veya çalıştırılmamıştır.'
 collections:
+  - repo: K-Dense-AI/scientific-agent-skills
+    archive: scientific-agent-skills-main.zip
+    category: academic-research
+    priority: 1
+    root_license: MIT
+    redistribution: references-only-individual-skill-license-check
+    selected_skills:
+      - skills/literature-review/SKILL.md
+      - skills/peer-review/SKILL.md
+      - skills/citation-management/SKILL.md
+      - skills/scientific-writing/SKILL.md
+      - skills/scientific-critical-thinking/SKILL.md
+      - skills/hypothesis-generation/SKILL.md
+      - skills/scientific-visualization/SKILL.md
+      - skills/research-lookup/SKILL.md
+    considerations:
+      - Sistematik tarama otomatik tamamlanmaz; arama, eleme ve kaynak doğrulama kayıtları gerekir.
+      - Peer-review yalnızca yetkili ve dergi politikalarına uygun gizli veri işlemeyi destekler.
+      - Bazı beceriler Python, Pandoc, XeLaTeX, Parallel veya OpenRouter erişimi gerektirir.
+      - Kök MIT lisansına ek olarak tekil SKILL.md license alanı incelenmelidir.
   - repo: nextlevelbuilder/ui-ux-pro-max-skill
     archive: ui-ux-pro-max-skill-main.zip
     category: design-creative

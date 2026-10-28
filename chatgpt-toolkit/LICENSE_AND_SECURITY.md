@@ -13,6 +13,7 @@
 
 - `integrations/agent-skills/` altındaki envanter ve rehberler **kaynak referanslarıdır**; yüklenen üçüncü taraf SKILL.md dosyaları, betikleri veya lisanslı veri dosyaları bu katalog paketine kopyalanmamıştır.
 - `nextlevelbuilder/ui-ux-pro-max-skill` ve `haidrrrry/claude-remotion-skill` arşivlerinde MIT lisansı bulunmuştur. Herhangi bir dosyayı yeniden dağıtmadan önce atıf, lisans ve üçüncü taraf varlık koşulları yeniden denetlenmelidir.
+- `K-Dense-AI/scientific-agent-skills` arşivinin kök lisansı MIT'dir; tekil becerilerin `license` alanı ayrıca kontrol edilmelidir. Akademik yazım ve hakemlik becerileri veri gizliliği, kaynak doğrulama ve dergi politikalarının yerini almaz.
 - `trailofbits/skills` CC BY-SA 4.0 kapsamındadır; uyarlama ve yeniden dağıtımda atıf ve ShareAlike yükümlülükleri ayrıca değerlendirilmelidir.
 - `vercel-labs/agent-skills` arşivinde kök düzeyde açık bir LICENSE/LICENCE dosyası bulunamamıştır. Yalnızca bağlantı verilmiştir; kaynak dosyalar bu pakette dağıtılmaz.
 - Kaynak depoların SKILL.md yönergelerinde dış bağlantılardan içerik çekme, yerel komut çalıştırma, kimlik bilgisi veya dış servis kullanma adımları bulunabilir. Bu işlemler kullanıcının açık yetkisi ve ortam denetimi olmadan yürütülmez.

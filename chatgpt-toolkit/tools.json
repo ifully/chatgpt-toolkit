@@ -142,6 +142,15 @@
       "purpose_tr": "Kaynaklara dayalı taslak araştırma sistemi; doğrulama gerekir."
     },
     {
+      "name": "scientific-agent-skills",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "category": "academic-research",
+      "priority": 1,
+      "execution_mode": "reference",
+      "purpose_tr": "Sistematik literatür taraması, atıf yönetimi, hakemlik ve bilimsel yazım becerileri; kaynak ve etik denetim gerekir."
+    },
+    {
       "name": "zotero",
       "repo": "zotero/zotero",
       "url": "https://github.com/zotero/zotero",
