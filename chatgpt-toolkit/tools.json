@@ -1,0 +1,604 @@
+{
+  "schema_version": "1.0.0",
+  "updated_on": "2026-10-28",
+  "scope": "Curated reference catalog; not an installation manifest or automatic ChatGPT plugin",
+  "execution_modes": {
+    "python-package": "Yalnızca ilgili Python paketi, bağımlılıkları ve çalışma izinleri mevcutsa bu oturumda çalıştırılabilir.",
+    "cli": "Yalnızca komut satırı aracı kurulu ve çalıştırma izni varsa çalıştırılabilir.",
+    "reference": "Kaynak kodu ve belgeleri incelenebilir; depoyu işaretlemek onu çalıştırmaz.",
+    "external-agent": "Ayrı ajan çalışma ortamı, kimlik bilgileri veya hizmet kurulumu gerektirebilir.",
+    "mcp-server": "MCP sunucusu ve uyumlu, yetkili istemci gerekir. ChatGPT Web desteği plana ve entegrasyona bağlıdır.",
+    "browser-runtime": "Tarayıcı altyapısı, bağımlılıklar ve gerekli yetkiler olmadan çalışmaz.",
+    "external-service": "Ayrı servis (lokal veya uzak) ve bağlantı gerekir.",
+    "desktop-or-service": "Masaüstü yazılım veya uygun uzak yürütme ortamı gerekir.",
+    "web-or-selfhost": "Web uygulaması/uzak sunucu üzerinden kullanılır; ChatGPT uygulamasına otomatik eklenmez.",
+    "javascript-runtime": "Tarayıcı/Node.js ve gerekli uygulama altyapısı gerekir."
+  },
+  "tools": [
+    {
+      "name": "codex",
+      "repo": "openai/codex",
+      "url": "https://github.com/openai/codex",
+      "category": "ai-agents",
+      "priority": 1,
+      "execution_mode": "external-agent",
+      "purpose_tr": "Terminal tabanlı kodlama ajanı; ayrı çalışma ortamı gerekir."
+    },
+    {
+      "name": "openai-agents-python",
+      "repo": "openai/openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python",
+      "category": "ai-agents",
+      "priority": 1,
+      "execution_mode": "python-package",
+      "purpose_tr": "Araç kullanan, görev devreden ajan uygulamaları geliştirme."
+    },
+    {
+      "name": "skills",
+      "repo": "openai/skills",
+      "url": "https://github.com/openai/skills",
+      "category": "ai-agents",
+      "priority": 1,
+      "execution_mode": "reference",
+      "purpose_tr": "Codex görev becerileri; uyumlu istemci ve yürütme ortamı gerekir."
+    },
+    {
+      "name": "skills",
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "category": "ai-agents",
+      "priority": 1,
+      "execution_mode": "reference",
+      "purpose_tr": "Agent Skills örnekleri ve yönergeleri; dosya bazlı lisansı doğrula."
+    },
+    {
+      "name": "servers",
+      "repo": "modelcontextprotocol/servers",
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "category": "ai-agents",
+      "priority": 1,
+      "execution_mode": "mcp-server",
+      "purpose_tr": "MCP sunucu uygulamaları; uygun istemci ve bağlantı gerekir."
+    },
+    {
+      "name": "langgraph",
+      "repo": "langchain-ai/langgraph",
+      "url": "https://github.com/langchain-ai/langgraph",
+      "category": "ai-agents",
+      "priority": 2,
+      "execution_mode": "python-package",
+      "purpose_tr": "Durum tutan, çok aşamalı ajan iş akışları."
+    },
+    {
+      "name": "OpenHands",
+      "repo": "OpenHands/OpenHands",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "category": "ai-agents",
+      "priority": 2,
+      "execution_mode": "external-agent",
+      "purpose_tr": "Kod geliştirme ajanı; servis veya çalışma ortamı gerektirir."
+    },
+    {
+      "name": "browser-use",
+      "repo": "browser-use/browser-use",
+      "url": "https://github.com/browser-use/browser-use",
+      "category": "ai-agents",
+      "priority": 2,
+      "execution_mode": "browser-runtime",
+      "purpose_tr": "Tarayıcı ile etkileşen ajanlar; tarayıcı ve servis yapılandırması gerekir."
+    },
+    {
+      "name": "transformers",
+      "repo": "huggingface/transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "category": "ai-agents",
+      "priority": 2,
+      "execution_mode": "python-package",
+      "purpose_tr": "Dil, görüntü ve çok kipli model uygulamaları."
+    },
+    {
+      "name": "ollama",
+      "repo": "ollama/ollama",
+      "url": "https://github.com/ollama/ollama",
+      "category": "ai-agents",
+      "priority": 2,
+      "execution_mode": "external-service",
+      "purpose_tr": "Modelleri lokal veya uzak makinede çalıştırma."
+    },
+    {
+      "name": "llama_index",
+      "repo": "run-llama/llama_index",
+      "url": "https://github.com/run-llama/llama_index",
+      "category": "ai-agents",
+      "priority": 2,
+      "execution_mode": "python-package",
+      "purpose_tr": "Belge erişimi ve RAG veri akışları."
+    },
+    {
+      "name": "qdrant",
+      "repo": "qdrant/qdrant",
+      "url": "https://github.com/qdrant/qdrant",
+      "category": "ai-agents",
+      "priority": 2,
+      "execution_mode": "external-service",
+      "purpose_tr": "Vektör arama veritabanı; servis gerekir."
+    },
+    {
+      "name": "gpt-researcher",
+      "repo": "assafelovic/gpt-researcher",
+      "url": "https://github.com/assafelovic/gpt-researcher",
+      "category": "ai-agents",
+      "priority": 2,
+      "execution_mode": "external-agent",
+      "purpose_tr": "Web kaynakları üzerinden otomatik araştırma iş akışları."
+    },
+    {
+      "name": "storm",
+      "repo": "stanford-oval/storm",
+      "url": "https://github.com/stanford-oval/storm",
+      "category": "ai-agents",
+      "priority": 2,
+      "execution_mode": "external-agent",
+      "purpose_tr": "Kaynaklara dayalı taslak araştırma sistemi; doğrulama gerekir."
+    },
+    {
+      "name": "zotero",
+      "repo": "zotero/zotero",
+      "url": "https://github.com/zotero/zotero",
+      "category": "academic-research",
+      "priority": 1,
+      "execution_mode": "desktop-or-service",
+      "purpose_tr": "Bibliyografik kaynak yönetimi; uygun uygulama/entegrasyon gerekir."
+    },
+    {
+      "name": "quarto-cli",
+      "repo": "quarto-dev/quarto-cli",
+      "url": "https://github.com/quarto-dev/quarto-cli",
+      "category": "academic-research",
+      "priority": 1,
+      "execution_mode": "cli",
+      "purpose_tr": "Tekrarlanabilir akademik yayın, rapor ve kitap üretimi."
+    },
+    {
+      "name": "pandoc",
+      "repo": "jgm/pandoc",
+      "url": "https://github.com/jgm/pandoc",
+      "category": "academic-research",
+      "priority": 1,
+      "execution_mode": "cli",
+      "purpose_tr": "Belge biçimleri arasında kontrollü dönüşüm."
+    },
+    {
+      "name": "typst",
+      "repo": "typst/typst",
+      "url": "https://github.com/typst/typst",
+      "category": "academic-research",
+      "priority": 1,
+      "execution_mode": "cli",
+      "purpose_tr": "Programatik tipografik dizgi ve akademik belge üretimi."
+    },
+    {
+      "name": "docling",
+      "repo": "docling-project/docling",
+      "url": "https://github.com/docling-project/docling",
+      "category": "academic-research",
+      "priority": 1,
+      "execution_mode": "python-package",
+      "purpose_tr": "PDF ve belgelerin yapısal çözümlenmesi."
+    },
+    {
+      "name": "markitdown",
+      "repo": "microsoft/markitdown",
+      "url": "https://github.com/microsoft/markitdown",
+      "category": "academic-research",
+      "priority": 1,
+      "execution_mode": "python-package",
+      "purpose_tr": "Ofis belgelerinin LLM dostu metne dönüşümü."
+    },
+    {
+      "name": "marker",
+      "repo": "datalab-to/marker",
+      "url": "https://github.com/datalab-to/marker",
+      "category": "academic-research",
+      "priority": 2,
+      "execution_mode": "python-package",
+      "purpose_tr": "PDF belgelerini Markdown/JSON biçimine dönüştürme."
+    },
+    {
+      "name": "python-docx",
+      "repo": "python-openxml/python-docx",
+      "url": "https://github.com/python-openxml/python-docx",
+      "category": "academic-research",
+      "priority": 2,
+      "execution_mode": "python-package",
+      "purpose_tr": "DOCX üretimi ve programatik belge düzenleme."
+    },
+    {
+      "name": "playwright",
+      "repo": "microsoft/playwright",
+      "url": "https://github.com/microsoft/playwright",
+      "category": "coding-development",
+      "priority": 1,
+      "execution_mode": "browser-runtime",
+      "purpose_tr": "Web arayüzü uçtan uca testleri."
+    },
+    {
+      "name": "playwright-mcp",
+      "repo": "microsoft/playwright-mcp",
+      "url": "https://github.com/microsoft/playwright-mcp",
+      "category": "coding-development",
+      "priority": 1,
+      "execution_mode": "mcp-server",
+      "purpose_tr": "Tarayıcı kontrolünü uygun MCP istemcisine açma."
+    },
+    {
+      "name": "uv",
+      "repo": "astral-sh/uv",
+      "url": "https://github.com/astral-sh/uv",
+      "category": "coding-development",
+      "priority": 1,
+      "execution_mode": "cli",
+      "purpose_tr": "Python paketleri ve izole çalışma ortamlarını yönetme."
+    },
+    {
+      "name": "ruff",
+      "repo": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff",
+      "category": "coding-development",
+      "priority": 1,
+      "execution_mode": "cli",
+      "purpose_tr": "Python statik kod denetimi ve biçimlendirme."
+    },
+    {
+      "name": "pytest",
+      "repo": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest",
+      "category": "coding-development",
+      "priority": 1,
+      "execution_mode": "python-package",
+      "purpose_tr": "Tekrarlanabilir birim ve entegrasyon testleri."
+    },
+    {
+      "name": "pre-commit",
+      "repo": "pre-commit/pre-commit",
+      "url": "https://github.com/pre-commit/pre-commit",
+      "category": "coding-development",
+      "priority": 2,
+      "execution_mode": "cli",
+      "purpose_tr": "Commit öncesi otomatik doğrulamalar."
+    },
+    {
+      "name": "pydantic",
+      "repo": "pydantic/pydantic",
+      "url": "https://github.com/pydantic/pydantic",
+      "category": "coding-development",
+      "priority": 2,
+      "execution_mode": "python-package",
+      "purpose_tr": "Python veri şeması ve girdi doğrulama."
+    },
+    {
+      "name": "wordpress-develop",
+      "repo": "WordPress/wordpress-develop",
+      "url": "https://github.com/WordPress/wordpress-develop",
+      "category": "coding-development",
+      "priority": 2,
+      "execution_mode": "reference",
+      "purpose_tr": "WordPress çekirdeği ile uyumluluk ve kaynak incelemesi."
+    },
+    {
+      "name": "woocommerce",
+      "repo": "woocommerce/woocommerce",
+      "url": "https://github.com/woocommerce/woocommerce",
+      "category": "coding-development",
+      "priority": 2,
+      "execution_mode": "reference",
+      "purpose_tr": "WooCommerce eklentileri, API ve uyumluluk incelemesi."
+    },
+    {
+      "name": "penpot",
+      "repo": "penpot/penpot",
+      "url": "https://github.com/penpot/penpot",
+      "category": "design-creative",
+      "priority": 1,
+      "execution_mode": "web-or-selfhost",
+      "purpose_tr": "Açık tasarım uygulaması ve tasarım sistemleri."
+    },
+    {
+      "name": "ui-ux-pro-max-skill",
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "category": "design-creative",
+      "priority": 1,
+      "execution_mode": "reference",
+      "purpose_tr": "Tipografi, renk, arayüz ve tasarım sistemi için Agent Skills; yüklenmiş sayılmaz."
+    },
+    {
+      "name": "fonttools",
+      "repo": "fonttools/fonttools",
+      "url": "https://github.com/fonttools/fonttools",
+      "category": "design-creative",
+      "priority": 1,
+      "execution_mode": "python-package",
+      "purpose_tr": "OpenType fontlarını analiz etme ve işleme."
+    },
+    {
+      "name": "fontbakery",
+      "repo": "fonttools/fontbakery",
+      "url": "https://github.com/fonttools/fontbakery",
+      "category": "design-creative",
+      "priority": 1,
+      "execution_mode": "cli",
+      "purpose_tr": "Font üretimi için kalite denetimi."
+    },
+    {
+      "name": "p5.js",
+      "repo": "processing/p5.js",
+      "url": "https://github.com/processing/p5.js",
+      "category": "design-creative",
+      "priority": 1,
+      "execution_mode": "javascript-runtime",
+      "purpose_tr": "Etkileşimli görseller ve yaratıcı kodlama."
+    },
+    {
+      "name": "excalidraw",
+      "repo": "excalidraw/excalidraw",
+      "url": "https://github.com/excalidraw/excalidraw",
+      "category": "design-creative",
+      "priority": 2,
+      "execution_mode": "web-or-selfhost",
+      "purpose_tr": "Eskiz ve görsel anlatım diyagramları."
+    },
+    {
+      "name": "tldraw",
+      "repo": "tldraw/tldraw",
+      "url": "https://github.com/tldraw/tldraw",
+      "category": "design-creative",
+      "priority": 2,
+      "execution_mode": "web-or-selfhost",
+      "purpose_tr": "Etkileşimli tuval uygulamaları; üretim lisansını doğrula."
+    },
+    {
+      "name": "manim",
+      "repo": "ManimCommunity/manim",
+      "url": "https://github.com/ManimCommunity/manim",
+      "category": "design-creative",
+      "priority": 2,
+      "execution_mode": "python-package",
+      "purpose_tr": "Programatik animasyon ve bilimsel anlatım."
+    },
+    {
+      "name": "claude-remotion-skill",
+      "repo": "haidrrrry/claude-remotion-skill",
+      "url": "https://github.com/haidrrrry/claude-remotion-skill",
+      "category": "design-creative",
+      "priority": 2,
+      "execution_mode": "reference",
+      "purpose_tr": "Remotion ile hareketli grafik ve kinetik tipografi üretimi; React ve render ortamı gerekir."
+    },
+    {
+      "name": "blender",
+      "repo": "blender/blender",
+      "url": "https://github.com/blender/blender",
+      "category": "design-creative",
+      "priority": 2,
+      "execution_mode": "desktop-or-service",
+      "purpose_tr": "3B modelleme, render ve Python otomasyonu."
+    },
+    {
+      "name": "three.js",
+      "repo": "mrdoob/three.js",
+      "url": "https://github.com/mrdoob/three.js",
+      "category": "design-creative",
+      "priority": 2,
+      "execution_mode": "javascript-runtime",
+      "purpose_tr": "Web tabanlı 3B grafik motoru."
+    },
+    {
+      "name": "glTF-Transform",
+      "repo": "donmccurdy/glTF-Transform",
+      "url": "https://github.com/donmccurdy/glTF-Transform",
+      "category": "design-creative",
+      "priority": 2,
+      "execution_mode": "cli",
+      "purpose_tr": "GLTF/GLB teknik düzenleme ve optimizasyon."
+    },
+    {
+      "name": "meshoptimizer",
+      "repo": "zeux/meshoptimizer",
+      "url": "https://github.com/zeux/meshoptimizer",
+      "category": "design-creative",
+      "priority": 2,
+      "execution_mode": "cli",
+      "purpose_tr": "3B ağ geometrisi optimizasyonu ve sıkıştırma."
+    },
+    {
+      "name": "glTF-Validator",
+      "repo": "KhronosGroup/glTF-Validator",
+      "url": "https://github.com/KhronosGroup/glTF-Validator",
+      "category": "design-creative",
+      "priority": 2,
+      "execution_mode": "cli",
+      "purpose_tr": "glTF varlıklarının teknik geçerlik denetimi."
+    },
+    {
+      "name": "model-viewer",
+      "repo": "google/model-viewer",
+      "url": "https://github.com/google/model-viewer",
+      "category": "design-creative",
+      "priority": 3,
+      "execution_mode": "javascript-runtime",
+      "purpose_tr": "Web sayfasında etkileşimli tekil 3B model sunumu."
+    },
+    {
+      "name": "vercel-agent-skills",
+      "repo": "vercel-labs/agent-skills",
+      "url": "https://github.com/vercel-labs/agent-skills",
+      "category": "design-creative",
+      "priority": 2,
+      "execution_mode": "reference",
+      "purpose_tr": "Web tasarımı, erişilebilirlik ve performans için beceriler; lisans dosyası doğrulanmalı."
+    },
+    {
+      "name": "duckdb",
+      "repo": "duckdb/duckdb",
+      "url": "https://github.com/duckdb/duckdb",
+      "category": "data-analysis",
+      "priority": 1,
+      "execution_mode": "python-package",
+      "purpose_tr": "SQL ile yerel veri dosyalarını analiz etme."
+    },
+    {
+      "name": "polars",
+      "repo": "pola-rs/polars",
+      "url": "https://github.com/pola-rs/polars",
+      "category": "data-analysis",
+      "priority": 1,
+      "execution_mode": "python-package",
+      "purpose_tr": "Büyük tablosal veri kümelerinin hızlı işlenmesi."
+    },
+    {
+      "name": "scikit-learn",
+      "repo": "scikit-learn/scikit-learn",
+      "url": "https://github.com/scikit-learn/scikit-learn",
+      "category": "data-analysis",
+      "priority": 1,
+      "execution_mode": "python-package",
+      "purpose_tr": "İstatistiksel öğrenme ve makine öğrenmesi."
+    },
+    {
+      "name": "plotly.py",
+      "repo": "plotly/plotly.py",
+      "url": "https://github.com/plotly/plotly.py",
+      "category": "data-analysis",
+      "priority": 1,
+      "execution_mode": "python-package",
+      "purpose_tr": "Etkileşimli veri görselleştirmesi."
+    },
+    {
+      "name": "pandas",
+      "repo": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas",
+      "category": "data-analysis",
+      "priority": 1,
+      "execution_mode": "python-package",
+      "purpose_tr": "Veri temizliği ve tablosal veri işleme."
+    },
+    {
+      "name": "scipy",
+      "repo": "scipy/scipy",
+      "url": "https://github.com/scipy/scipy",
+      "category": "data-analysis",
+      "priority": 2,
+      "execution_mode": "python-package",
+      "purpose_tr": "Bilimsel hesaplama ve istatistiksel yöntemler."
+    },
+    {
+      "name": "streamlit",
+      "repo": "streamlit/streamlit",
+      "url": "https://github.com/streamlit/streamlit",
+      "category": "data-analysis",
+      "priority": 2,
+      "execution_mode": "web-or-selfhost",
+      "purpose_tr": "Veri odaklı Python web uygulamaları."
+    },
+    {
+      "name": "kedro",
+      "repo": "kedro-org/kedro",
+      "url": "https://github.com/kedro-org/kedro",
+      "category": "data-analysis",
+      "priority": 2,
+      "execution_mode": "python-package",
+      "purpose_tr": "Modüler ve yeniden üretilebilir veri işlem hatları."
+    },
+    {
+      "name": "n8n",
+      "repo": "n8n-io/n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "category": "automation-mcp",
+      "priority": 1,
+      "execution_mode": "web-or-selfhost",
+      "purpose_tr": "Servisler arası otomatik iş akışları; lisans koşullarını doğrula."
+    },
+    {
+      "name": "activepieces",
+      "repo": "activepieces/activepieces",
+      "url": "https://github.com/activepieces/activepieces",
+      "category": "automation-mcp",
+      "priority": 1,
+      "execution_mode": "web-or-selfhost",
+      "purpose_tr": "İş akışı otomasyonu ve uygulama entegrasyonları."
+    },
+    {
+      "name": "trivy",
+      "repo": "aquasecurity/trivy",
+      "url": "https://github.com/aquasecurity/trivy",
+      "category": "security-testing",
+      "priority": 1,
+      "execution_mode": "cli",
+      "purpose_tr": "Bağımlılık, konteyner, SBOM ve yapılandırma güvenliği."
+    },
+    {
+      "name": "semgrep",
+      "repo": "semgrep/semgrep",
+      "url": "https://github.com/semgrep/semgrep",
+      "category": "security-testing",
+      "priority": 1,
+      "execution_mode": "cli",
+      "purpose_tr": "Statik analiz ve kod güvenliği taraması."
+    },
+    {
+      "name": "gitleaks",
+      "repo": "gitleaks/gitleaks",
+      "url": "https://github.com/gitleaks/gitleaks",
+      "category": "security-testing",
+      "priority": 1,
+      "execution_mode": "cli",
+      "purpose_tr": "Kaynak kodunda yanlışlıkla bırakılan sırları bulma."
+    },
+    {
+      "name": "scorecard",
+      "repo": "ossf/scorecard",
+      "url": "https://github.com/ossf/scorecard",
+      "category": "security-testing",
+      "priority": 2,
+      "execution_mode": "cli",
+      "purpose_tr": "Açık kaynak proje güvenlik süreçlerini değerlendirme."
+    },
+    {
+      "name": "axe-core",
+      "repo": "dequelabs/axe-core",
+      "url": "https://github.com/dequelabs/axe-core",
+      "category": "security-testing",
+      "priority": 2,
+      "execution_mode": "javascript-runtime",
+      "purpose_tr": "WCAG odaklı otomatik erişilebilirlik kontrolleri."
+    },
+    {
+      "name": "lighthouse",
+      "repo": "GoogleChrome/lighthouse",
+      "url": "https://github.com/GoogleChrome/lighthouse",
+      "category": "security-testing",
+      "priority": 2,
+      "execution_mode": "cli",
+      "purpose_tr": "Web performans ve erişilebilirlik denetimi."
+    },
+    {
+      "name": "bandit",
+      "repo": "PyCQA/bandit",
+      "url": "https://github.com/PyCQA/bandit",
+      "category": "security-testing",
+      "priority": 2,
+      "execution_mode": "python-package",
+      "purpose_tr": "Python güvenlik odaklı statik kontroller."
+    },
+    {
+      "name": "trailofbits-skills",
+      "repo": "trailofbits/skills",
+      "url": "https://github.com/trailofbits/skills",
+      "category": "security-testing",
+      "priority": 2,
+      "execution_mode": "reference",
+      "purpose_tr": "Kod ve güvenlik denetimine yönelik Agent Skills; CC BY-SA 4.0 ve bağımlılıklar kontrol edilmeli."
+    }
+  ]
+}

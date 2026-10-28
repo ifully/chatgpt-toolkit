@@ -1,0 +1,56 @@
+schema_version: 1.0.0
+reviewed_on: '2026-10-28'
+mode: reference-only
+source: user-provided-zip-archives
+notes: 'Katalog dosyaları üçüncü taraf kaynak kodu içermez; hiçbir beceri yüklenmemiş veya çalıştırılmamıştır.'
+collections:
+  - repo: nextlevelbuilder/ui-ux-pro-max-skill
+    archive: ui-ux-pro-max-skill-main.zip
+    category: design-creative
+    priority: 1
+    root_license: MIT
+    redistribution: references-only
+    selected_skills:
+      - .claude/skills/ui-ux-pro-max/SKILL.md
+      - .claude/skills/design-system/SKILL.md
+      - .claude/skills/brand/SKILL.md
+    considerations:
+      - Python betikleri ve veri tabloları ayrı bağımlılıklar gerektirebilir.
+      - Tipografi ve renk önerileri insan denetimiyle değerlendirilmeli.
+  - repo: vercel-labs/agent-skills
+    archive: agent-skills-main.zip
+    category: design-creative
+    priority: 2
+    root_license: not-found-in-supplied-archive
+    redistribution: links-only-license-pending
+    selected_skills:
+      - skills/web-design-guidelines/SKILL.md
+      - skills/react-best-practices/SKILL.md
+      - skills/composition-patterns/SKILL.md
+    considerations:
+      - Web-design-guidelines güncel yönergeleri dış URL üzerinden okuyabilir.
+      - Yeniden dağıtım öncesinde kaynak ve dosya lisansı doğrulanmalı.
+  - repo: haidrrrry/claude-remotion-skill
+    archive: claude-remotion-skill-main.zip
+    category: design-creative
+    priority: 2
+    root_license: MIT
+    redistribution: references-only
+    selected_skills:
+      - remotion-motion-graphics/SKILL.md
+    considerations:
+      - Remotion, React ve video render altyapısı gerekir.
+      - Ek örnek medya ve bağımlılıklar bu katalogda barındırılmaz.
+  - repo: trailofbits/skills
+    archive: skills-main.zip
+    category: security-testing
+    priority: 2
+    root_license: CC-BY-SA-4.0
+    redistribution: references-only
+    selected_skills:
+      - plugins/differential-review/skills/differential-review/SKILL.md
+      - plugins/agentic-actions-auditor/skills/agentic-actions-auditor/SKILL.md
+      - plugins/code-improver/skills/skill-improver/SKILL.md
+    considerations:
+      - Bazı beceriler başka eklentilere ve ajan alt görevlerine dayanır.
+      - Yeniden dağıtımda atıf ve aynı lisans koşulları değerlendirilmeli.
