@@ -74,3 +74,198 @@ collections:
     considerations:
       - Bazı beceriler başka eklentilere ve ajan alt görevlerine dayanır.
       - Yeniden dağıtımda atıf ve aynı lisans koşulları değerlendirilmeli.
+  - repo: muratcankoylan/Agent-Skills-for-Context-Engineering
+    archive: Agent-Skills-for-Context-Engineering-main.zip
+    category: ai-agents
+    priority: 1
+    root_license: MIT
+    redistribution: references-only
+    selected_skills:
+      - skills/context-compression/SKILL.md
+      - skills/context-degradation/SKILL.md
+      - skills/memory-systems/SKILL.md
+      - skills/evaluation/SKILL.md
+      - skills/harness-engineering/SKILL.md
+      - skills/self-improvement-loops/SKILL.md
+      - skills/tool-design/SKILL.md
+    considerations:
+      - İş akışı iyileştirmesi model ağırlıklarını değiştirmez; insan onayı ve ölçülebilir değerlendirme gerekir.
+      - Kalıcı bellek mekanizmaları ayrıca yetkilendirilip yapılandırılmalıdır.
+  - repo: getsentry/skills
+    archive: skills-main(1).zip
+    category: coding-development
+    priority: 1
+    root_license: Apache-2.0
+    redistribution: references-only
+    selected_skills:
+      - skills/skill-writer/SKILL.md
+      - skills/skill-scanner/SKILL.md
+      - skills/brand-guidelines/SKILL.md
+      - skills/doc-coauthoring/SKILL.md
+    considerations:
+      - Bazı beceriler Sentry altyapısına veya Claude eklentilerine özgüdür.
+      - Yazılan ve taranan beceriler bağımsız güvenlik incelemesinden muaf değildir.
+  - repo: obra/superpowers
+    archive: superpowers-main.zip
+    category: coding-development
+    priority: 2
+    root_license: MIT
+    redistribution: references-only-no-global-instructions
+    selected_skills:
+      - skills/systematic-debugging/SKILL.md
+      - skills/test-driven-development/SKILL.md
+      - skills/verification-before-completion/SKILL.md
+    considerations:
+      - skills/using-superpowers/SKILL.md tüm yanıtlardan önce zorunlu beceri çağrısı ister; depo genel kuralları otomatik alınmaz.
+      - Alt-ajan ve git iş akışları her çalışma ortamında desteklenmeyebilir.
+  - repo: wshobson/agents
+    archive: agents-main.zip
+    category: ai-agents
+    priority: 2
+    root_license: MIT
+    redistribution: references-only-selective
+    selected_skills:
+      - plugins/accessibility-compliance/skills/screen-reader-testing/SKILL.md
+      - plugins/llm-application-dev/skills/llm-evaluation/SKILL.md
+      - plugins/plugin-eval/skills/evaluation-methodology/SKILL.md
+      - plugins/frontend-mobile-development/skills/tailwind-design-system/SKILL.md
+    considerations:
+      - Büyük ajan/eklenti koleksiyonu tek seferde kurulmamalıdır.
+      - Eklenti bağımlılıkları ve görev yetki sınırları tek tek incelenmelidir.
+  - repo: huggingface/skills
+    archive: skills-main (1).zip
+    category: academic-research
+    priority: 1
+    root_license: Apache-2.0
+    redistribution: references-only
+    selected_skills:
+      - skills/hf-cli/SKILL.md
+      - skills/huggingface-datasets/SKILL.md
+      - skills/huggingface-community-evals/SKILL.md
+      - skills/huggingface-gradio/SKILL.md
+    considerations:
+      - Hugging Face CLI, hesap izinleri ve gerektiğinde API belirteçleri ayrıca gerekir.
+      - Model ve veri kümesi lisansları kök depo lisansından ayrı değerlendirilmelidir.
+  - repo: github/awesome-copilot
+    archive: awesome-copilot-main.zip
+    category: ai-agents
+    priority: 1
+    root_license: MIT
+    redistribution: references-only
+    selected_skills:
+      - skills/adobe-illustrator-scripting/SKILL.md
+      - skills/agentic-eval/SKILL.md
+      - skills/agent-supply-chain/SKILL.md
+      - skills/penpot-uiux-design/SKILL.md
+    considerations:
+      - Topluluk katkısı olan büyük bir koleksiyondur; tekil becerilerin güncelliği ve güvenliği doğrulanmalıdır.
+      - Illustrator betiklerini çalıştırmak uygun Adobe uygulaması ve açık izin gerektirir.
+  - repo: remotion-dev/skills
+    archive: skills-main (2).zip
+    category: design-creative
+    priority: 1
+    root_license: not-found-in-supplied-archive
+    redistribution: links-only-license-pending
+    selected_skills:
+      - skills/remotion-best-practices/SKILL.md
+      - skills/remotion-captions/SKILL.md
+      - skills/remotion-render/SKILL.md
+      - skills/remotion-interactivity/SKILL.md
+    considerations:
+      - Kök lisans dosyası bulunamadı; yetki doğrulanmadan dosyalar kopyalanmamalıdır.
+      - Ayrı Remotion/React/Node ve render ortamı gerekir.
+      - Daha önceki haidrrrry/claude-remotion-skill kaydıyla işlev örtüşmesi kontrol edilmelidir.
+  - repo: NVIDIA/skills
+    archive: skills-main (3).zip
+    category: ai-agents
+    priority: 3
+    root_license: Apache-2.0-and-CC-BY-4.0
+    redistribution: references-only-license-separation
+    selected_skills:
+      - skills/nvidia-skill-finder/SKILL.md
+      - skills/data-designer/SKILL.md
+      - skills/accelerated-computing-cudf/SKILL.md
+    considerations:
+      - Kod, belge ve tekil ürün içeriklerinde geçerli lisanslar ayrı doğrulanmalıdır.
+      - Donanım, sürücü ve NVIDIA hizmetlerine yönelik bağımlılıklar olabilir.
+  - repo: seb1n/awesome-ai-agent-skills
+    archive: awesome-ai-agent-skills-main.zip
+    category: ai-agents
+    priority: 2
+    root_license: MIT
+    redistribution: references-only-selective
+    selected_skills:
+      - agent-engineering/agent-evaluation/SKILL.md
+      - agent-security/skill-supply-chain-audit/SKILL.md
+      - design-and-ui-ux/accessibility-testing/SKILL.md
+      - design-and-ui-ux/logo-design/SKILL.md
+    considerations:
+      - Topluluk becerileri doğruluk ve kaynak kalitesi açısından tek tek sınanmalıdır.
+      - Koleksiyonun varlığı herhangi bir becerinin bu oturumda kurulu olduğu anlamına gelmez.
+  - repo: openai/evals
+    archive: evals-main.zip
+    category: ai-agents
+    priority: 1
+    root_license: MIT
+    redistribution: references-only
+    selected_skills: []
+    considerations:
+      - Bu depo SKILL.md paketi değil, test ve karşılaştırma altyapısıdır.
+      - Değerlendirme sonuçları bağımsız veri kümeleri ve insan incelemesi gerektirir.
+  - repo: promptfoo/promptfoo
+    archive: promptfoo-main.zip
+    category: security-testing
+    priority: 1
+    root_license: MIT
+    redistribution: references-only
+    selected_skills:
+      - plugins/promptfoo/skills/promptfoo-evals/SKILL.md
+      - plugins/promptfoo/skills/promptfoo-redteam-run/SKILL.md
+    considerations:
+      - Ana ürün CLI/test sistemidir; içindeki örnek beceriler ana ürünün yerine geçmez.
+      - Red-team deneyleri yalnızca yetkili hedeflerde ve veri güvenliği kurallarına uygun yapılır.
+  - repo: upstash/context7
+    archive: context7-master.zip
+    category: automation-mcp
+    priority: 1
+    root_license: MIT
+    redistribution: references-only
+    selected_skills:
+      - skills/context7-mcp/SKILL.md
+      - skills/context7-cli/SKILL.md
+      - skills/find-docs/SKILL.md
+    considerations:
+      - MCP sunucusu, CLI veya istemci entegrasyonu ayrı yapılandırılmalıdır.
+      - Dış belgelerin güncelliği, doğruluğu ve sağlayıcı koşulları ayrıca incelenmelidir.
+  - repo: modelcontextprotocol/registry
+    archive: registry-main.zip
+    category: automation-mcp
+    priority: 2
+    root_license: MIT-Apache-2.0-transition-docs-CC-BY-4.0
+    redistribution: references-only-license-transition
+    selected_skills: []
+    considerations:
+      - SKILL.md koleksiyonu değil, MCP kayıt ve keşif altyapısıdır.
+      - Kök lisans metni geçmiş MIT katkıları, Apache-2.0 yeni kod ve CC BY 4.0 belgeleri ayırmaktadır.
+  - repo: langchain-ai/deepagents
+    archive: deepagents-main.zip
+    category: ai-agents
+    priority: 2
+    root_license: MIT
+    redistribution: references-only
+    selected_skills:
+      - examples/deploy-coding-agent/skills/code-review/SKILL.md
+      - libs/code/examples/skills/web-research/SKILL.md
+    considerations:
+      - Ana ürün bağımsız ajan altyapısıdır; örnek SKILL.md dosyaları kendi başına kurulmuş sayılmaz.
+      - Sürekli bellek, alt-ajan ve araç erişimi için ayrıca uygulama gereklidir.
+  - repo: VoltAgent/awesome-agent-skills
+    archive: awesome-agent-skills-main.zip
+    category: ai-agents
+    priority: 3
+    root_license: MIT
+    redistribution: index-links-only
+    selected_skills: []
+    considerations:
+      - Arşivde SKILL.md bulunmaz; haricî bağlantıları derleyen keşif dizinidir.
+      - Haricî listedeki her depo, dosya ve lisans için bağımsız kontrol gerekir.

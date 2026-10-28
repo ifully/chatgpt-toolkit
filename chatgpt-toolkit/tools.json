@@ -608,6 +608,141 @@
       "priority": 2,
       "execution_mode": "reference",
       "purpose_tr": "Kod ve güvenlik denetimine yönelik Agent Skills; CC BY-SA 4.0 ve bağımlılıklar kontrol edilmeli."
+    },
+    {
+      "name": "context-engineering-agent-skills",
+      "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "category": "ai-agents",
+      "priority": 1,
+      "execution_mode": "reference",
+      "purpose_tr": "Bağlam sıkıştırma, değerlendirme, bellek ve kontrollü ajan iyileştirme becerileri."
+    },
+    {
+      "name": "sentry-skills",
+      "repo": "getsentry/skills",
+      "url": "https://github.com/getsentry/skills",
+      "category": "coding-development",
+      "priority": 1,
+      "execution_mode": "reference",
+      "purpose_tr": "Skill-writer ve skill-scanner dahil geliştirici becerileri; yetki ve çalışma ortamı denetlenmeli."
+    },
+    {
+      "name": "superpowers",
+      "repo": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "category": "coding-development",
+      "priority": 2,
+      "execution_mode": "reference",
+      "purpose_tr": "Hata ayıklama ve teslim öncesi doğrulama becerileri; global davranış kuralları otomatik etkinleştirilmez."
+    },
+    {
+      "name": "wshobson-agents",
+      "repo": "wshobson/agents",
+      "url": "https://github.com/wshobson/agents",
+      "category": "ai-agents",
+      "priority": 2,
+      "execution_mode": "reference",
+      "purpose_tr": "Uzman ajanlar ve çok alanlı beceri koleksiyonu; tekil seçim ve güvenlik denetimi gerekir."
+    },
+    {
+      "name": "huggingface-skills",
+      "repo": "huggingface/skills",
+      "url": "https://github.com/huggingface/skills",
+      "category": "academic-research",
+      "priority": 1,
+      "execution_mode": "reference",
+      "purpose_tr": "Model, veri kümesi, araştırma ve Hugging Face CLI iş akışları için beceri yönergeleri."
+    },
+    {
+      "name": "awesome-copilot",
+      "repo": "github/awesome-copilot",
+      "url": "https://github.com/github/awesome-copilot",
+      "category": "ai-agents",
+      "priority": 1,
+      "execution_mode": "reference",
+      "purpose_tr": "GitHub Copilot beceri ve yönerge koleksiyonu; Illustrator otomasyonu gibi alan örnekleri içerir."
+    },
+    {
+      "name": "remotion-skills",
+      "repo": "remotion-dev/skills",
+      "url": "https://github.com/remotion-dev/skills",
+      "category": "design-creative",
+      "priority": 1,
+      "execution_mode": "reference",
+      "purpose_tr": "Remotion animasyon, altyazı ve render becerileri; kök lisans belirsiz, yalnızca bağlantı."
+    },
+    {
+      "name": "nvidia-skills",
+      "repo": "NVIDIA/skills",
+      "url": "https://github.com/NVIDIA/skills",
+      "category": "ai-agents",
+      "priority": 3,
+      "execution_mode": "reference",
+      "purpose_tr": "NVIDIA ürünlerine özgü beceri kataloğu; kod/doküman lisansları ve donanım koşulları ayrılmalı."
+    },
+    {
+      "name": "seb1n-agent-skills",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills",
+      "category": "ai-agents",
+      "priority": 2,
+      "execution_mode": "reference",
+      "purpose_tr": "Ajan değerlendirmesi, güvenliği, görsel tasarım ve iş akışlarına yönelik seçilebilir beceriler."
+    },
+    {
+      "name": "openai-evals",
+      "repo": "openai/evals",
+      "url": "https://github.com/openai/evals",
+      "category": "ai-agents",
+      "priority": 1,
+      "execution_mode": "python-package",
+      "purpose_tr": "Yapay zekâ çıktılarını tekrarlanabilir değerlendirme senaryolarıyla karşılaştırma; bağımsız kurulum gerekir."
+    },
+    {
+      "name": "promptfoo",
+      "repo": "promptfoo/promptfoo",
+      "url": "https://github.com/promptfoo/promptfoo",
+      "category": "security-testing",
+      "priority": 1,
+      "execution_mode": "cli",
+      "purpose_tr": "LLM/ajan testleri ve red-team değerlendirmeleri; yetkili hedefler ve ayrı çalıştırma ortamı gerekir."
+    },
+    {
+      "name": "context7",
+      "repo": "upstash/context7",
+      "url": "https://github.com/upstash/context7",
+      "category": "automation-mcp",
+      "priority": 1,
+      "execution_mode": "mcp-server",
+      "purpose_tr": "Kütüphane ve API belgelerine güncel bağlam sağlama; bağlantı, istemci ve servis koşulları gerekir."
+    },
+    {
+      "name": "mcp-registry",
+      "repo": "modelcontextprotocol/registry",
+      "url": "https://github.com/modelcontextprotocol/registry",
+      "category": "automation-mcp",
+      "priority": 2,
+      "execution_mode": "reference",
+      "purpose_tr": "MCP sunucularının keşif/kayıt altyapısı; sunucu listesini kullanmak sunucuları kurmaz."
+    },
+    {
+      "name": "deepagents",
+      "repo": "langchain-ai/deepagents",
+      "url": "https://github.com/langchain-ai/deepagents",
+      "category": "ai-agents",
+      "priority": 2,
+      "execution_mode": "python-package",
+      "purpose_tr": "Uzun görevlerde bağlam, dosya ve alt-ajan iş akışları oluşturma; bağımsız uygulama altyapısıdır."
+    },
+    {
+      "name": "awesome-agent-skills",
+      "repo": "VoltAgent/awesome-agent-skills",
+      "url": "https://github.com/VoltAgent/awesome-agent-skills",
+      "category": "ai-agents",
+      "priority": 3,
+      "execution_mode": "reference",
+      "purpose_tr": "Haricî beceri depolarını keşfetmeye yarayan bağlantı dizini; doğrudan SKILL.md içermez."
     }
   ]
 }

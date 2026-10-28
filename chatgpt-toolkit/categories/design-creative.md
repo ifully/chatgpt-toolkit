@@ -9,6 +9,8 @@ Bu sayfadaki depolar birer öneri ve kaynak bağlantısıdır; ChatGPT Web için
 | 1 | [p5.js](https://github.com/processing/p5.js) | Etkileşimli görseller ve yaratıcı kodlama. | `javascript-runtime` |
 | 1 | [penpot](https://github.com/penpot/penpot) | Açık tasarım uygulaması ve tasarım sistemleri. | `web-or-selfhost` |
 | 1 | [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Tipografi, renk, arayüz tasarımı ve tasarım sistemi için Agent Skill koleksiyonu. | `reference` |
+| 1 | [remotion-skills](https://github.com/remotion-dev/skills) | Animasyon, altyazı ve render becerileri; kök lisans doğrulanmadığından yalnızca bağlantı. | `reference` |
+| 1 | [awesome-copilot](https://github.com/github/awesome-copilot) | Illustrator betikleri ve Penpot becerileri dahil geniş talimat koleksiyonu; tekil beceri denetimi gerekir. | `reference` |
 | 2 | [blender](https://github.com/blender/blender) | 3B modelleme, render ve Python otomasyonu. | `desktop-or-service` |
 | 2 | [excalidraw](https://github.com/excalidraw/excalidraw) | Eskiz ve görsel anlatım diyagramları. | `web-or-selfhost` |
 | 2 | [glTF-Transform](https://github.com/donmccurdy/glTF-Transform) | GLTF/GLB teknik düzenleme ve optimizasyon. | `cli` |

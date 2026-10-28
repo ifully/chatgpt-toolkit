@@ -1,6 +1,8 @@
-# Kaynak arşivleri, bütünlük ve lisans
+# Kaynak arşivleri, bütünlük ve lisans — v2 ve v3
 
-**Denetim:** 28 Ekim 2026. Aşağıdaki özet kullanıcıdan gelen orijinal ZIP dosyalarının incelenmesine dayanır. Beş arşiv de `unzip -tq` bütünlük testini hatasız geçti. Testin başarısı içerikteki kodun güvenli olduğunu kanıtlamaz.
+Yeni sağlanan **15 arşivlik v3 paketi** için ayrıntılı SHA-256, kök lisans ve `SKILL.md` envanteri: [BATCH-V3-ARCHIVE-AUDIT.md](BATCH-V3-ARCHIVE-AUDIT.md). Aşağıdaki tablo, daha önce işlenen **ilk beş** ZIP'e aittir.
+
+**Denetim:** 28 Ekim 2026. Aşağıdaki özet ilk beş ZIP dosyasına dayanır. Beş arşiv de `unzip -tq` bütünlük testini hatasız geçti. Testin başarısı içerikteki kodun güvenli olduğunu kanıtlamaz.
 
 | Dosya | SHA-256 | ZIP içindeki lisans bulgusu |
 |---|---|---|

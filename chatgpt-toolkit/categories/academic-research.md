@@ -11,6 +11,7 @@ Bu sayfadaki depolar birer öneri ve kaynak bağlantısıdır; ChatGPT Web için
 | 1 | [typst](https://github.com/typst/typst) | Programatik tipografik dizgi ve akademik belge üretimi. | `cli` |
 | 1 | [zotero](https://github.com/zotero/zotero) | Bibliyografik kaynak yönetimi; uygun uygulama/entegrasyon gerekir. | `desktop-or-service` |
 | 1 | [scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | Literatür taraması, hakemlik, atıf yönetimi, bilimsel yazım ve eleştirel değerlendirme becerileri. | `reference` |
+| 1 | [huggingface-skills](https://github.com/huggingface/skills) | Veri kümesi oluşturma, model değerlendirmesi ve Hugging Face CLI becerileri; kaynak/etik denetim şart. | `reference` |
 | 2 | [marker](https://github.com/datalab-to/marker) | PDF belgelerini Markdown/JSON biçimine dönüştürme. | `python-package` |
 | 2 | [python-docx](https://github.com/python-openxml/python-docx) | DOCX üretimi ve programatik belge düzenleme. | `python-package` |
 

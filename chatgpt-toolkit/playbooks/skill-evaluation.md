@@ -32,3 +32,13 @@ Bu protokol, bir `SKILL.md` becerisini **kullanmadan veya kaynak kodunu taşıma
 - [ ] Sonuçlar `kuruldu`, `yalnızca referans`, `lisans belirsiz`, `test edilmedi` olarak açıkça ayrıldı.
 
 **Geçiş kuralı:** Bütünlük kontrolü, README varlığı veya GitHub yıldız sayısı tek başına kabul için yeterli değildir. Bir beceri ancak lisans/bağımlılık/güvenlik incelemesi ve hedef ortam testinden sonra "kurulabilir" veya "çalışıyor" olarak raporlanabilir.
+
+## 5. Ölçülebilir iyileştirme kapısı
+
+- [ ] Temsilî görevler, başarı ölçütleri ve mevcut becerisiz/önceki sürüm sonucu kaydedildi.
+- [ ] Test girdileri ile gerçek kullanıcı/veri gizliliği ayrıştırıldı.
+- [ ] Yeni becerinin çıktısı, aynı koşullarda önceki sürümle karşılaştırıldı.
+- [ ] Hata ve güvenlik gerilemeleri kaydedildi; başarısız değişiklik etkinleştirilmedi.
+- [ ] İnsan onayı sonrası uygun ajan ortamında kontrollü kurulum kararı verildi.
+
+Örnek değerlendirme metodolojisi: [agent-skill-quality-loop.md](agent-skill-quality-loop.md). Büyük bir beceri koleksiyonundaki `SKILL.md` dosyası sayısı, kalite veya o dosyaların bağımsız çalışabilirliği anlamına gelmez.

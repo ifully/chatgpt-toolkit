@@ -12,6 +12,7 @@
 3. İş türüne göre `playbooks/` klasöründeki kontrol listesini uygulayın.
 4. Kod ajanları için `AGENTS.md` güvenlik ve seçim yönergesini kullanın.
 5. İlgili kaynağın güncel README, lisans, sürüm ve bağımlılıklarını ayrıca doğrulayın.
+6. Ajan becerileri için `integrations/agent-skills/catalog.yaml` kaydındaki ZIP kökenini ve seçilmiş `SKILL.md` yollarını kontrol edin; beceriler otomatik kurulmaz.
 
 ## ChatGPT Web'de gerçek kullanım modeli
 
@@ -48,8 +49,11 @@
 - [Veri analizi](playbooks/data-analysis.md)
 - [Tasarım ve tipografi denetimi](playbooks/design-quality.md)
 - [Üçüncü taraf beceri değerlendirmesi](playbooks/skill-evaluation.md)
+- [Beceri performansını ölçme ve iyileştirme döngüsü](playbooks/agent-skill-quality-loop.md)
 
 ## Lisans ve güvenlik
 - [Lisans/tedarik zinciri kuralları](LICENSE_AND_SECURITY.md)
 
 Bu katalog bir bağlantı ve iş akışı dizinidir; kaynak kodlarının dağıtımı değildir. Repo lisansları, servis fiyatları ve sürümler zamanla değişebilir. Kopyalama, dağıtma veya üretime alma öncesinde kaynak depoları yeniden denetlenmelidir.
+
+**28 Ekim 2026 v3 eklentisi:** Kullanıcı arşivlerinden doğrulanan 15 yeni depo, önceki 66 katalog kaydı üzerine eklenerek toplam 81 kayıt oluşturuldu. Bazı kaynaklar Agent Skills koleksiyonu, bazıları değerlendirme, MCP veya keşif altyapısıdır. [15 arşivlik ayrıntılı inceleme](integrations/agent-skills/BATCH-V3-ARCHIVE-AUDIT.md).

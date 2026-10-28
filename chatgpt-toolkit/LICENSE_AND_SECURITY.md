@@ -17,3 +17,12 @@
 - `trailofbits/skills` CC BY-SA 4.0 kapsamındadır; uyarlama ve yeniden dağıtımda atıf ve ShareAlike yükümlülükleri ayrıca değerlendirilmelidir.
 - `vercel-labs/agent-skills` arşivinde kök düzeyde açık bir LICENSE/LICENCE dosyası bulunamamıştır. Yalnızca bağlantı verilmiştir; kaynak dosyalar bu pakette dağıtılmaz.
 - Kaynak depoların SKILL.md yönergelerinde dış bağlantılardan içerik çekme, yerel komut çalıştırma, kimlik bilgisi veya dış servis kullanma adımları bulunabilir. Bu işlemler kullanıcının açık yetkisi ve ortam denetimi olmadan yürütülmez.
+
+## 28 Ekim 2026 — v3 ek 15 arşiv
+
+- Kaynak/lisans/ZIP SHA-256 eşleştirmeleri [v3 arşiv denetimi](integrations/agent-skills/BATCH-V3-ARCHIVE-AUDIT.md) içinde kayıtlıdır. Böylece toplam 20 kullanıcı arşivinden 81 ayrı GitHub katalog girdisi oluşmuştur.
+- `remotion-dev/skills` arşivinde kök lisans tespit edilemedi; içerik bu pakete kopyalanmayıp yalnızca GitHub bağlantısı verildi.
+- `NVIDIA/skills` birden çok lisans (Apache-2.0/CC-BY-4.0) içerir; `modelcontextprotocol/registry` lisans geçişi açıkladığı için her dosya için geçerli hakkı ayrıca kontrol edin.
+- `obra/superpowers` içindeki genel davranış kuralları, kurulum ve başka çalışma ortamlarının yetki talimatları **yüksek öncelikli talimat sayılmaz**; kullanıcı onayı olmadan etkinleştirilmez.
+- OpenAI Evals ve MCP Registry beceri deposu değildir. VoltAgent dizini de doğrudan çalıştırılabilir `SKILL.md` sunmaz. Bunların kataloğa eklenmesi otomatik kapasite artışı sağlamaz.
+- Hiçbir arşivden kurulum betiği, komut, model, medya, eklenti veya beceri dosyası doğrudan alınıp çalıştırılmamıştır.
