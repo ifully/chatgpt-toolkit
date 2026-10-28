@@ -1,6 +1,6 @@
 # ChatGPT Toolkit — Başlangıç ve kullanım rehberi
 
-> **Bu depodaki GitHub projeleri otomatik olarak ChatGPT'ye kurulmaz.** Depo, araç seçimini, uygunluk denetimini ve güvenli kullanım biçimini standartlaştırmak amacıyla hazırlanmış bir kataloğudur.
+> **Bu depodaki GitHub projeleri otomatik olarak ChatGPT'ye kurulmaz.** Depo, araç seçimini, uygunluk denetimini ve güvenli kullanım biçimini standartlaştırmak amacıyla hazırlanmış bir katalogdur.
 
 **Güncelleme:** 28 Ekim 2026  
 **Kapsam:** Yapay zekâ, akademik araştırma, programlama, belge üretimi, tasarım, veri analizi, otomasyon ve güvenlik.
@@ -13,6 +13,7 @@
 4. Kod ajanları için `AGENTS.md` güvenlik ve seçim yönergesini kullanın.
 5. İlgili kaynağın güncel README, lisans, sürüm ve bağımlılıklarını ayrıca doğrulayın.
 6. Ajan becerileri için `integrations/agent-skills/catalog.yaml` kaydındaki ZIP kökenini ve seçilmiş `SKILL.md` yollarını kontrol edin; beceriler otomatik kurulmaz.
+7. Bilimsel yazılım ve tersine mühendislik kaynakları için `integrations/research-tools/catalog.yaml` kaydını ve kaynak arşiv denetimini inceleyin.
 
 ## ChatGPT Web'de gerçek kullanım modeli
 
@@ -40,6 +41,8 @@
 - [Otomasyon ve MCP](categories/automation-mcp.md)
 - [Güvenlik, erişilebilirlik ve kalite](categories/security-testing.md)
 - [Agent Skills beceri depoları](categories/agent-skills.md)
+- [Bilimsel proje ve araştırma fikri geliştirme](categories/scientific-projects.md)
+- [Yazılım ve görsel tersine mühendislik](categories/reverse-engineering.md)
 
 ## Görev akışları
 - [Akademik literatür incelemesi](playbooks/academic-research.md)
@@ -50,6 +53,7 @@
 - [Tasarım ve tipografi denetimi](playbooks/design-quality.md)
 - [Üçüncü taraf beceri değerlendirmesi](playbooks/skill-evaluation.md)
 - [Beceri performansını ölçme ve iyileştirme döngüsü](playbooks/agent-skill-quality-loop.md)
+- [Araştırma projesi yöntemi ve doğrulama akışı](playbooks/research-project-methodology.md)
 
 ## Lisans ve güvenlik
 - [Lisans/tedarik zinciri kuralları](LICENSE_AND_SECURITY.md)
@@ -57,3 +61,5 @@
 Bu katalog bir bağlantı ve iş akışı dizinidir; kaynak kodlarının dağıtımı değildir. Repo lisansları, servis fiyatları ve sürümler zamanla değişebilir. Kopyalama, dağıtma veya üretime alma öncesinde kaynak depoları yeniden denetlenmelidir.
 
 **28 Ekim 2026 v3 eklentisi:** Kullanıcı arşivlerinden doğrulanan 15 yeni depo, önceki 66 katalog kaydı üzerine eklenerek toplam 81 kayıt oluşturuldu. Bazı kaynaklar Agent Skills koleksiyonu, bazıları değerlendirme, MCP veya keşif altyapısıdır. [15 arşivlik ayrıntılı inceleme](integrations/agent-skills/BATCH-V3-ARCHIVE-AUDIT.md).
+
+**28 Ekim 2026 v4 eklentisi:** Kullanıcıdan gelen 14 bilimsel araştırma/tersine mühendislik arşivi ayrı kataloglanarak toplam **95** benzersiz kaynak elde edildi. Bu yazılımların çoğu `SKILL.md` değildir; kurulum için bağımsız uygulama/çalışma ortamı gerektirir. [14 arşivlik denetim](integrations/research-tools/ARCHIVE-AUDIT-V4.md).

@@ -14,6 +14,11 @@ Bu sayfadaki depolar birer öneri ve kaynak bağlantısıdır; ChatGPT Web için
 | 1 | [huggingface-skills](https://github.com/huggingface/skills) | Veri kümesi oluşturma, model değerlendirmesi ve Hugging Face CLI becerileri; kaynak/etik denetim şart. | `reference` |
 | 2 | [marker](https://github.com/datalab-to/marker) | PDF belgelerini Markdown/JSON biçimine dönüştürme. | `python-package` |
 | 2 | [python-docx](https://github.com/python-openxml/python-docx) | DOCX üretimi ve programatik belge düzenleme. | `python-package` |
+| 1 | [autora](https://github.com/AutoResearch/autora) | Hipotez ve deney tasarımının otomasyonu; insan metodoloji kontrolü gerekir. | `python-package` |
+| 1 | [openscholar](https://github.com/AkariAsai/OpenScholar) | Kanıt temelli bilimsel literatür sentezi; ayrı model/erişim gerekir. | `external-agent` |
+| 1 | [psychopy](https://github.com/psychopy/psychopy) | Görsel algı ve davranış deneyleri; uygulama arayüzü ayrı depodadır. | `python-package` |
+| 1 | [osf-io](https://github.com/CenterForOpenScience/osf.io) | Araştırma proje ve açık bilim altyapısının kaynak kodu; servis kurulu değildir. | `web-or-selfhost` |
+| 1 | [paddleocr](https://github.com/PaddlePaddle/PaddleOCR) | Akademik/görsel arşivlerden OCR ve belge yapısı çıkarma. | `python-package` |
 
 ## Uygulama ölçütü
 

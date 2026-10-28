@@ -13,6 +13,9 @@ Bu sayfadaki depolar birer öneri ve kaynak bağlantısıdır; ChatGPT Web için
 | 2 | [lighthouse](https://github.com/GoogleChrome/lighthouse) | Web performans ve erişilebilirlik denetimi. | `cli` |
 | 2 | [scorecard](https://github.com/ossf/scorecard) | Açık kaynak proje güvenlik süreçlerini değerlendirme. | `cli` |
 | 2 | [trailofbits-skills](https://github.com/trailofbits/skills) | Güvenlik ve kod denetim becerileri; CC BY-SA 4.0 lisansına dikkat et. | `reference` |
+| 1 | [ghidra](https://github.com/NationalSecurityAgency/ghidra) | İzinli ikili dosya analizi ve dekompilasyon. | `desktop-or-service` |
+| 2 | [angr](https://github.com/angr/angr) | Program akışı ve sembolik yürütme analizi. | `python-package` |
+| 2 | [rizin](https://github.com/rizinorg/rizin) | Komut satırı üzerinden izinli tersine mühendislik. | `cli` |
 
 ## Uygulama ölçütü
 

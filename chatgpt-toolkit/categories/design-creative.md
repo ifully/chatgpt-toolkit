@@ -22,6 +22,8 @@ Bu sayfadaki depolar birer öneri ve kaynak bağlantısıdır; ChatGPT Web için
 | 2 | [tldraw](https://github.com/tldraw/tldraw) | Etkileşimli tuval uygulamaları; üretim lisansını doğrula. | `web-or-selfhost` |
 | 2 | [vercel-agent-skills](https://github.com/vercel-labs/agent-skills) | Web arayüzü, erişilebilirlik ve performans denetimi için beceriler; lisansı kontrol et. | `reference` |
 | 3 | [model-viewer](https://github.com/google/model-viewer) | Web sayfasında etkileşimli tekil 3B model sunumu. | `javascript-runtime` |
+| 1 | [vtracer](https://github.com/visioncortex/vtracer) | Raster görüntüyü SVG'ye vektörleştirme; özgün tasarımın kanıtı değildir. | `cli` |
+| 2 | [colmap](https://github.com/colmap/colmap) | Fotoğraflardan 3B geometri yeniden yapılandırması ve belgeleme. | `desktop-or-service` |
 
 ## Uygulama ölçütü
 

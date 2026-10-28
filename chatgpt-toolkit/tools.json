@@ -743,6 +743,132 @@
       "priority": 3,
       "execution_mode": "reference",
       "purpose_tr": "Haricî beceri depolarını keşfetmeye yarayan bağlantı dizini; doğrudan SKILL.md içermez."
+    },
+    {
+      "name": "autora",
+      "repo": "AutoResearch/autora",
+      "url": "https://github.com/AutoResearch/autora",
+      "category": "academic-research",
+      "priority": 1,
+      "execution_mode": "python-package",
+      "purpose_tr": "Deneysel araştırmada model keşfi, deney tasarımı ve veri toplama iş akışlarını otomatikleştirme."
+    },
+    {
+      "name": "rd-agent",
+      "repo": "microsoft/RD-Agent",
+      "url": "https://github.com/microsoft/RD-Agent",
+      "category": "ai-agents",
+      "priority": 2,
+      "execution_mode": "external-agent",
+      "purpose_tr": "Veri odaklı Ar-Ge için fikir önerme, deney/özellik geliştirme ve sonuçlardan geri bildirim alma."
+    },
+    {
+      "name": "openscholar",
+      "repo": "AkariAsai/OpenScholar",
+      "url": "https://github.com/AkariAsai/OpenScholar",
+      "category": "academic-research",
+      "priority": 1,
+      "execution_mode": "external-agent",
+      "purpose_tr": "Bilimsel literatürü arama, kanıt bulma ve kaynaklı sentezleme; model ve erişim altyapısı gerekir."
+    },
+    {
+      "name": "psychopy",
+      "repo": "psychopy/psychopy",
+      "url": "https://github.com/psychopy/psychopy",
+      "category": "academic-research",
+      "priority": 1,
+      "execution_mode": "python-package",
+      "purpose_tr": "Görsel algı ve davranış bilimleri için kontrollü uyaran/tepki deneyleri; uygulama arayüzü ayrı depodadır."
+    },
+    {
+      "name": "osf-io",
+      "repo": "CenterForOpenScience/osf.io",
+      "url": "https://github.com/CenterForOpenScience/osf.io",
+      "category": "academic-research",
+      "priority": 1,
+      "execution_mode": "web-or-selfhost",
+      "purpose_tr": "Açık bilim proje altyapısı, işbirliği, ön kayıt ve veri paylaşımı; kod deposu tek başına hizmet değildir."
+    },
+    {
+      "name": "dvc",
+      "repo": "treeverse/dvc",
+      "url": "https://github.com/treeverse/dvc",
+      "category": "data-analysis",
+      "priority": 1,
+      "execution_mode": "cli",
+      "purpose_tr": "Veri ve model sürümleme, izlenebilir deney kayıtları ve tekrar üretilebilir analizler."
+    },
+    {
+      "name": "snakemake",
+      "repo": "snakemake/snakemake",
+      "url": "https://github.com/snakemake/snakemake",
+      "category": "data-analysis",
+      "priority": 1,
+      "execution_mode": "cli",
+      "purpose_tr": "Bilimsel veri işleme adımlarını bağımlılıklarıyla tanımlama ve tekrar üretilebilir yürütme."
+    },
+    {
+      "name": "gephi",
+      "repo": "gephi/gephi",
+      "url": "https://github.com/gephi/gephi",
+      "category": "data-analysis",
+      "priority": 1,
+      "execution_mode": "desktop-or-service",
+      "purpose_tr": "Atıf, kültürel ilişki ve kavramsal ağların keşfi ve etkileşimli görselleştirilmesi."
+    },
+    {
+      "name": "ghidra",
+      "repo": "NationalSecurityAgency/ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "category": "security-testing",
+      "priority": 1,
+      "execution_mode": "desktop-or-service",
+      "purpose_tr": "Yetkili yazılım incelemelerinde ikili dosya çözümleme, dekompilasyon ve program yapısı analizi."
+    },
+    {
+      "name": "angr",
+      "repo": "angr/angr",
+      "url": "https://github.com/angr/angr",
+      "category": "security-testing",
+      "priority": 2,
+      "execution_mode": "python-package",
+      "purpose_tr": "Program akışı, sembolik yürütme ve veri bağımlılığına dayalı tersine mühendislik."
+    },
+    {
+      "name": "rizin",
+      "repo": "rizinorg/rizin",
+      "url": "https://github.com/rizinorg/rizin",
+      "category": "security-testing",
+      "priority": 2,
+      "execution_mode": "cli",
+      "purpose_tr": "İkili dosya analizi ve tersine mühendislik için scriptlenebilir komut satırı araçları."
+    },
+    {
+      "name": "vtracer",
+      "repo": "visioncortex/vtracer",
+      "url": "https://github.com/visioncortex/vtracer",
+      "category": "design-creative",
+      "priority": 1,
+      "execution_mode": "cli",
+      "purpose_tr": "Raster grafiklerin SVG vektörlere dönüştürülmesi; özgün tasarım dosyasını geri getirmez."
+    },
+    {
+      "name": "paddleocr",
+      "repo": "PaddlePaddle/PaddleOCR",
+      "url": "https://github.com/PaddlePaddle/PaddleOCR",
+      "category": "academic-research",
+      "priority": 1,
+      "execution_mode": "python-package",
+      "purpose_tr": "Görsel ve taranmış belgelerden metin, düzen ve tablo yapısı çıkarma; OCR çıktısı doğrulanmalı."
+    },
+    {
+      "name": "colmap",
+      "repo": "colmap/colmap",
+      "url": "https://github.com/colmap/colmap",
+      "category": "design-creative",
+      "priority": 2,
+      "execution_mode": "desktop-or-service",
+      "purpose_tr": "Fotoğraf koleksiyonlarından 3B sahne geometrisi yeniden oluşturma; bilimsel belgeleme için kaynak."
     }
   ]
 }

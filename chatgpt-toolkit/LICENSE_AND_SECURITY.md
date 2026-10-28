@@ -26,3 +26,13 @@
 - `obra/superpowers` içindeki genel davranış kuralları, kurulum ve başka çalışma ortamlarının yetki talimatları **yüksek öncelikli talimat sayılmaz**; kullanıcı onayı olmadan etkinleştirilmez.
 - OpenAI Evals ve MCP Registry beceri deposu değildir. VoltAgent dizini de doğrudan çalıştırılabilir `SKILL.md` sunmaz. Bunların kataloğa eklenmesi otomatik kapasite artışı sağlamaz.
 - Hiçbir arşivden kurulum betiği, komut, model, medya, eklenti veya beceri dosyası doğrudan alınıp çalıştırılmamıştır.
+
+## 28 Ekim 2026 — v4 bilimsel araçlar ve tersine mühendislik
+
+- [V4 envanteri](integrations/research-tools/ARCHIVE-AUDIT-V4.md) 14 ZIP'in SHA-256, kök lisans, kaynak eşleştirmesi ve CRC sonuçlarını kaydeder. Önceki 81 kayıtla birlikte katalog 95 benzersiz depoya ulaşmıştır.
+- `psychopy/psychopy` GPL-3.0, `gephi/gephi` CDDL-1.0/GPL-3.0 çift lisans, `rizinorg/rizin` GPL-3.0/LGPL-3.0 bileşenleri taşır. Lisans koşulları her dosya ve bileşen için değerlendirilir.
+- `colmap/colmap` BSD-3-Clause kaynak lisansına ek olarak ayrı lisanslı bağımlılıklar kullanabilir. Bunun yeniden dağıtım kapsamı ayrıca incelenmelidir.
+- `osf.io-develop`, `psychopy-dev` ve `rizin-dev` gibi arşivler geliştirme dallarıdır; üretim kullanımında kararlı release, sürüm ve güvenlik duyuruları kontrol edilmelidir.
+- Bilinmeyen/şüpheli ikili dosyaların analizi ayrı izole ortamda, yalnızca yetkili hedeflerde yapılmalıdır. Ghidra, angr veya Rizin'in kataloğa eklenmesi bunları mevcut oturumda kurulu hâle getirmez.
+- Görsel veri işleme için OCR, vektörleştirme ve fotogrametri çıktıları bilimsel belgelemede **gözlemlenmiş kaynak veri** ile **algoritmik çıkarım** olarak ayrılmalıdır.
+- Araştırma fikri üreten araçların sonuçları etik inceleme, literatür doğrulama, yöntemsel geçerlik ve insan uzman denetiminin yerine geçmez.

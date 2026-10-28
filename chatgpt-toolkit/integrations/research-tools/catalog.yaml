@@ -1,0 +1,118 @@
+schema_version: 1.0.0
+reviewed_on: '2026-10-28'
+mode: reference-only
+source: user-provided-zip-archives
+notes: Kayıtlar, üçüncü taraf kod dağıtımı veya otomatik kurulum içermez. ZIP SHA-256 kaynak commit kimliği değildir.
+repositories:
+  - repo: AutoResearch/autora
+    archive: autora-main.zip
+    category: academic-research
+    purpose: automated-experimental-design
+    root_license: MIT
+    sha256: 23dbb29a52a0656d9ccdc5820d509cdf956b50b78e76678cb97402910e8c764a
+    selected_use: Görsel algı gibi deneysel araştırmalarda hipotez ve deney tasarımı iş akışları.
+    caveats: Ampirik doğrulama ve insan denetimi gerektirir; bağımsız Python kurulumu gerekir.
+  - repo: microsoft/RD-Agent
+    archive: RD-Agent-main.zip
+    category: ai-agents
+    purpose: data-driven-idea-and-model-iteration
+    root_license: MIT
+    sha256: 6ba2445a263b44f5c0dda6aae15a3652f5f6c393eeac17875e82eebe42fa184b
+    selected_use: Veriye dayalı fikir, özellik ve model önerilerinin deneyle sınanması.
+    caveats: Bağımsız ajan kurulumu, hesap/servis erişimi ve deney bütçesi gerektirebilir.
+  - repo: AkariAsai/OpenScholar
+    archive: OpenScholar-main.zip
+    category: academic-research
+    purpose: evidence-grounded-scientific-synthesis
+    root_license: Apache-2.0
+    sha256: befeda36186735d337b8f73a631518e5e79830ecdf457fff6730b735864c4e9e
+    selected_use: Kaynaklara bağlı literatür yanıtları ve bilimsel sentez.
+    caveats: LLM/retrieval sunucuları, veri erişimi ve atıf-iddia düzeyinde doğrulama gerekir.
+  - repo: psychopy/psychopy
+    archive: psychopy-dev.zip
+    category: academic-research
+    purpose: behavioral-and-visual-perception-experiments
+    root_license: GPL-3.0
+    sha256: da2c0ce0761917c5db0ce735de6227542f74179606cb5776aa61003c5c204e66
+    selected_use: Görsel uyaran ve tepki ölçümü gerektiren deneysel çalışma.
+    caveats: Sağlanan arşiv dev dalıdır; GUI farklı depolarda, kararlı sürüm ayrıca doğrulanmalı.
+  - repo: CenterForOpenScience/osf.io
+    archive: osf.io-develop.zip
+    category: academic-research
+    purpose: research-project-platform-and-preregistration
+    root_license: Apache-2.0
+    sha256: 46ea2dbc37e481fff78c8369d592ed1225a24c7ad126fe50606cdc8ecea03a37
+    selected_use: Açık bilim süreçleri, araştırma projesi ve protokol ön kayıt altyapısı.
+    caveats: Kaynak kodu platformun develop dalıdır; kullanılabilir OSF hizmetiyle karıştırılmamalıdır.
+  - repo: treeverse/dvc
+    archive: dvc-main.zip
+    category: data-analysis
+    purpose: research-data-versioning
+    root_license: Apache-2.0
+    sha256: 629c5467d3aeb8be48678eda6e55978ad5f3c0a2d580f8fa47cee6327edddca3
+    selected_use: Veri sürümleri ve karşılaştırmalı deney kayıtları.
+    caveats: Git ve veri saklama/erişim düzeni ayrıca yapılandırılmalıdır.
+  - repo: snakemake/snakemake
+    archive: snakemake-main.zip
+    category: data-analysis
+    purpose: reproducible-computational-workflows
+    root_license: MIT
+    sha256: 0d8a0c8e742483f3c61c0e96004cd18dd41326af5fbd6df819ee366a70790a15
+    selected_use: Bilimsel analiz aşamalarını izlenebilir ve tekrar üretilebilir kılma.
+    caveats: Yürütme ortamı, paketler ve veri kaynakları ayrıca kurulmalıdır.
+  - repo: gephi/gephi
+    archive: gephi-master.zip
+    category: data-analysis
+    purpose: bibliometric-and-cultural-network-visualization
+    root_license: CDDL-1.0-OR-GPL-3.0-dual-license
+    sha256: 964a58f1eddc020cd04ee5819a8d53df9463bca36c02bf92501438c6248f06cc
+    selected_use: Atıf, ortak yazarlık, kavram ve kültürel ilişki ağlarının görselleştirilmesi.
+    caveats: Lisans çift seçeneklidir; ağ metriklerinin anlamı kaynak veriyle sınanmalıdır.
+  - repo: NationalSecurityAgency/ghidra
+    archive: ghidra-master.zip
+    category: security-testing
+    purpose: binary-software-reverse-engineering
+    root_license: Apache-2.0
+    sha256: 30f7bd677cb1ceb5448b94480a851a4adabe4e7c97a2613b144bb60180ca2ca2
+    selected_use: Yetkili yazılım analizi, derlenmiş kod ve program yapısı incelemesi.
+    caveats: Uygun JDK/çalıştırma ortamı ve şüpheli ikililer için izolasyon gerekir.
+  - repo: angr/angr
+    archive: angr-master.zip
+    category: security-testing
+    purpose: symbolic-execution-and-program-analysis
+    root_license: BSD-2-Clause
+    sha256: 4c25534244858f38d3057149c1b5b941b0990e369eb3e05beeacdbf153c50d69
+    selected_use: Derlenmiş program davranışının sembolik ve veri akışı açısından analizi.
+    caveats: Teknik uzmanlık ve Python bağımlılıkları gerektirir; yetkisiz hedefler için kullanılamaz.
+  - repo: rizinorg/rizin
+    archive: rizin-dev.zip
+    category: security-testing
+    purpose: scriptable-binary-analysis
+    root_license: GPL-3.0-and-LGPL-3.0-components
+    sha256: 03f515f7d61c0cb0a31eb1c338a3c64150322a2a1717cb83101540e5ea21a42d
+    selected_use: Komut satırı üzerinden yetkili tersine mühendislik ve hata analizi.
+    caveats: Sağlanan arşiv dev dalıdır; bileşen bazında GPL/LGPL koşulları incelenmelidir.
+  - repo: visioncortex/vtracer
+    archive: vtracer-master.zip
+    category: design-creative
+    purpose: raster-to-vector-reconstruction
+    root_license: MIT
+    sha256: 53861fb174a62cee30364381c647128ae677a5735ab45139426aa48f265ca6c1
+    selected_use: Afiş, tarihî çizim veya tarama gibi raster kaynaklardan incelenebilir SVG üretme.
+    caveats: Vektörleştirme özgün tasarım dosyasını veya tarihsel üretim tekniğini ispatlamaz.
+  - repo: PaddlePaddle/PaddleOCR
+    archive: PaddleOCR-main.zip
+    category: academic-research
+    purpose: multilingual-text-and-document-extraction
+    root_license: Apache-2.0
+    sha256: 666a6eb4c3a0bdf84e113482acf11d6c7b4731a4e65ef9317e96b52c2474ad8e
+    selected_use: Tipografik ve görsel arşivlerde metin ve belge düzeni çıkarma.
+    caveats: OCR hata oranı belge, yazı sistemi, tarama koşulu ve model sürümüne göre ölçülmelidir.
+  - repo: colmap/colmap
+    archive: colmap-main.zip
+    category: design-creative
+    purpose: multiview-3d-reconstruction
+    root_license: BSD-3-Clause
+    sha256: d0c9f8fb2bd627bdc1398f7cc3c59d72ebb82d233b6ea1b98b4bd9ecfecf0610
+    selected_use: Kültürel miras nesnelerinin çoklu fotoğraftan 3B geometrik belgelemesi.
+    caveats: Yeterli görüntü örtüşmesi/kalitesi, donanım ve ayrı üçüncü taraf bağımlılık lisansları gerekir.
