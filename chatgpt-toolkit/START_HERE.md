@@ -14,6 +14,18 @@
 5. İlgili kaynağın güncel README, lisans, sürüm ve bağımlılıklarını ayrıca doğrulayın.
 6. Ajan becerileri için `integrations/agent-skills/catalog.yaml` kaydındaki ZIP kökenini ve seçilmiş `SKILL.md` yollarını kontrol edin; beceriler otomatik kurulmaz.
 7. Bilimsel yazılım ve tersine mühendislik kaynakları için `integrations/research-tools/catalog.yaml` kaydını ve kaynak arşiv denetimini inceleyin.
+8. v5 ile Türkçe/İngilizce görev tanımından öneri ve doğrulama kontrolü almak için `python3 routing/task_router.py "göreviniz"` çalıştırın. Python/CLI erişimi olmayan ChatGPT Project ortamında `routing/CHATGPT_PROJECT_INSTRUCTIONS.md` metnini ve ilgili katalog dosyalarını elle bağlayın.
+
+### Görev yönlendiricisi (v5)
+
+```bash
+python3 routing/task_router.py "Tipografik okunabilirlik için deney ve literatür planlayalım"
+python3 routing/task_router.py "Yetkili firmware tersine mühendislik analizi" --json
+python3 routing/task_router.py "Veri analizi" --probe
+python3 -m unittest discover -s routing/tests -v
+```
+
+Bu katman **17 görev sınıfından 95 katalog kaydı için uygun adaylar** seçer, risk/çıktı kontrolü önerir ve istenirse pasif ortam görünürlük kontrolü yapar. `--probe` aracı çalıştırmaz veya sürüm/yetki doğrulamaz; bütün sonuçlarda gerçekten kullanılabilirlik ayrıca denetlenir. Ayrıntı: [routing/README.md](routing/README.md).
 
 ## ChatGPT Web'de gerçek kullanım modeli
 
@@ -63,3 +75,5 @@ Bu katalog bir bağlantı ve iş akışı dizinidir; kaynak kodlarının dağıt
 **28 Ekim 2026 v3 eklentisi:** Kullanıcı arşivlerinden doğrulanan 15 yeni depo, önceki 66 katalog kaydı üzerine eklenerek toplam 81 kayıt oluşturuldu. Bazı kaynaklar Agent Skills koleksiyonu, bazıları değerlendirme, MCP veya keşif altyapısıdır. [15 arşivlik ayrıntılı inceleme](integrations/agent-skills/BATCH-V3-ARCHIVE-AUDIT.md).
 
 **28 Ekim 2026 v4 eklentisi:** Kullanıcıdan gelen 14 bilimsel araştırma/tersine mühendislik arşivi ayrı kataloglanarak toplam **95** benzersiz kaynak elde edildi. Bu yazılımların çoğu `SKILL.md` değildir; kurulum için bağımsız uygulama/çalışma ortamı gerektirir. [14 arşivlik denetim](integrations/research-tools/ARCHIVE-AUDIT-V4.md).
+
+**28 Ekim 2026 v5 eklentisi:** Yeni haricî depo eklenmeden mevcut 95 kaynak için **17 kural tabanlı görev yönlendirmesi**, güvenli pasif ortam yoklaması, görev bazlı doğrulama ölçütleri ve çevrimdışı testler eklendi. Bu işlem ChatGPT Web'e otomatik kurulum sağlamaz. [Yönlendirici rehberi](routing/README.md).

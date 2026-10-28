@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Türkçe/İngilizce görev ifadelerinden katalogdaki uygun kaynakları önermek için elle gözden geçirilmiş, deterministik kurallar.",
+  "rules": [
+    {
+      "id": "research-ideation",
+      "label_tr": "Bilimsel proje ve araştırma fikri",
+      "triggers": ["araştırma fikri", "proje fikri", "bilimsel proje", "hipotez", "tübitak", "araştırma tasarımı", "proje öner", "research idea", "research proposal", "experimental design"],
+      "repos": ["AutoResearch/autora", "AkariAsai/OpenScholar", "K-Dense-AI/scientific-agent-skills", "microsoft/RD-Agent", "zotero/zotero"],
+      "validation": ["Araştırma sorusu ve özgünlük iddiasını güncel literatürle karşılaştır.", "Hipotez, değişkenler, örnekleme, etik ve uygulanabilirlik ölçütlerini yaz.", "Kaynak künyelerini ve DOI'leri yayıncı/birincil kaynaktan doğrula."],
+      "cautions": ["Otomatik üretilen fikir veya hipotez bilimsel geçerlilik kanıtı değildir."]
+    },
+    {
+      "id": "literature-citations",
+      "label_tr": "Literatür taraması ve kaynak doğrulama",
+      "triggers": ["literatür", "doi", "atıf", "bibliyograf", "kaynak tarama", "sistematik derleme", "kaynakça", "systematic review", "citation", "literature review"],
+      "repos": ["AkariAsai/OpenScholar", "K-Dense-AI/scientific-agent-skills", "zotero/zotero", "docling-project/docling", "quarto-dev/quarto-cli"],
+      "validation": ["Arama stratejisi ve dahil etme/dışlama ölçütlerini kaydet.", "Makale başlığı, yazar, yıl, dergi ve DOI eşleşmesini doğrula.", "Özete dayalı çıkarımları tam metin ve yöntem bölümüyle karşılaştır."],
+      "cautions": ["Erişilemeyen tam metinden sonuç uydurma; lisans ve erişim haklarını koru."]
+    },
+    {
+      "id": "academic-writing",
+      "label_tr": "Akademik yazım ve yayın",
+      "triggers": ["makale", "tez", "q1", "bildiri", "yayın", "scopus", "wos", "hakem", "akademik kitap", "manuscript", "peer review"],
+      "repos": ["K-Dense-AI/scientific-agent-skills", "zotero/zotero", "quarto-dev/quarto-cli", "jgm/pandoc", "typst/typst"],
+      "validation": ["İddia–kanıt–atıf zincirini paragraf düzeyinde denetle.", "Dergi veya konferans yazım rehberini güncel resmî sayfasından doğrula.", "Yapay zekâ yardımı, etik ve kaynak politikasına uygunluk denetimi yap."],
+      "cautions": ["Dergi indeks veya Q sınıfı değerlendirmesi güncel veriyle ayrıca doğrulanmalıdır."]
+    },
+    {
+      "id": "behavioral-experiment",
+      "label_tr": "Deney ve görsel algı araştırması",
+      "triggers": ["deney", "görsel algı", "okunabilirlik", "uyaran", "tepki süresi", "katılımcı", "kullanıcı testi", "experiment", "reaction time", "legibility"],
+      "repos": ["psychopy/psychopy", "AutoResearch/autora", "scipy/scipy", "pandas-dev/pandas", "plotly/plotly.py"],
+      "validation": ["Ön kayıt, hipotez, ölçüm geçerliliği, etik kurul ve onam gereksinimini değerlendir.", "Uyaran koşullarını, randomizasyonu ve örneklem gerekçesini belgeleyin.", "Analizi tekrar üretilebilir veri ve kodla doğrula."],
+      "cautions": ["İnsan katılımcı verisini izinsiz üçüncü taraf servise aktarma."]
+    },
+    {
+      "id": "qualitative-research",
+      "label_tr": "Nitel, kültürel ve göstergebilimsel araştırma",
+      "triggers": ["nitel", "görüşme", "tematik", "söylem", "göstergebilim", "kültürel analiz", "etnograf", "semiotic", "qualitative", "discourse analysis"],
+      "repos": ["K-Dense-AI/scientific-agent-skills", "AkariAsai/OpenScholar", "PaddlePaddle/PaddleOCR", "gephi/gephi", "docling-project/docling"],
+      "validation": ["Kuramsal çerçeve ile kodlama kategorilerini gerekçelendir.", "Örnekleme, araştırmacı konumlanışı ve negatif örnekleri raporla.", "Alıntıları asıl belgeye, görüntüye veya kayıt dökümüne geri bağla."],
+      "cautions": ["Nitel yorumlarda otomatik etiketleme araştırmacı yargısının yerine geçmez."]
+    },
+    {
+      "id": "bibliometrics",
+      "label_tr": "Bibliyometri ve kavram ağları",
+      "triggers": ["bibliyometr", "atıf ağı", "ortak yazarlık", "araştırma eğilimi", "kavram ağı", "network analysis", "co-citation", "citation network"],
+      "repos": ["gephi/gephi", "zotero/zotero", "AkariAsai/OpenScholar", "plotly/plotly.py", "pandas-dev/pandas"],
+      "validation": ["Veri tabanı kapsamını, arama tarihini ve erişim yanlılığını belirt.", "Kayıt tekilleştirme ve ağ eşiklerini belgele.", "Grafikteki nicel eğilimleri kavramsal önemle karıştırma."],
+      "cautions": ["Bibliyometrik ağlar alanın tamamını temsil etmeyebilir."]
+    },
+    {
+      "id": "reproducibility",
+      "label_tr": "Araştırma tekrarlanabilirliği ve açık bilim",
+      "triggers": ["tekrar üretilebilir", "yeniden üretilebilir", "veri sürüm", "ön kayıt", "osf", "prereg", "reproducib", "open science", "veri yönetim planı"],
+      "repos": ["treeverse/dvc", "snakemake/snakemake", "CenterForOpenScience/osf.io", "quarto-dev/quarto-cli", "kedro-org/kedro"],
+      "validation": ["Veri ve kod sürümlerini sabitle, rastgelelik tohumlarını kaydet.", "Kişisel verileri ayıkla ve paylaşım izinlerini denetle.", "İş akışını temiz ortamda yeniden çalıştırarak çıktıyı karşılaştır."],
+      "cautions": ["OSF platformunun sunucu kodu, bir hesabın veya proje alanının bağlı olduğunu göstermez."]
+    },
+    {
+      "id": "visual-archive",
+      "label_tr": "Görsel arşiv, OCR ve kültürel miras",
+      "triggers": ["arşiv", "ocr", "transkripsiyon", "motif", "usta profili", "tarihî belge", "tarihsel afiş", "el sanatı", "heritage", "vectorize"],
+      "repos": ["PaddlePaddle/PaddleOCR", "visioncortex/vtracer", "docling-project/docling", "colmap/colmap", "gephi/gephi"],
+      "validation": ["OCR metnini orijinal görüntüyle satır satır örnekleyerek kontrol et.", "Eser, tarih, müellif ve motif atıflarını kaynak ve provenansla doğrula.", "Telif, kişilik hakları ve arşiv yeniden kullanım koşullarını kontrol et."],
+      "cautions": ["Bir el sanatında görülen motif, kanıt olmadan belirli bir ustaya atfedilemez."]
+    },
+    {
+      "id": "graphic-design",
+      "label_tr": "Grafik tasarım, tipografi ve marka",
+      "triggers": ["grafik tasarım", "tipografi", "afiş", "logo", "font", "görsel kimlik", "renk paleti", "kurumsal kimlik", "graphic design", "typography"],
+      "repos": ["nextlevelbuilder/ui-ux-pro-max-skill", "fonttools/fonttools", "fonttools/fontbakery", "penpot/penpot", "visioncortex/vtracer"],
+      "validation": ["Kullanım bağlamında kontrast, hiyerarşi, okunabilirlik ve erişilebilirliği test et.", "Font lisansı, glif kapsaması ve baskı/ekran üretim koşullarını kontrol et.", "Görsel çözümün hedef kitle ve iletişim amacıyla ilişkisini gerekçelendir."],
+      "cautions": ["Tasarım kaynağının katalogda görünmesi o araca erişimin etkin olduğu anlamına gelmez."]
+    },
+    {
+      "id": "motion-design",
+      "label_tr": "Animasyon ve hareketli grafik",
+      "triggers": ["animasyon", "kinetik", "hareketli grafik", "remotion", "video", "motion graphics", "title animation"],
+      "repos": ["remotion-dev/skills", "haidrrrry/claude-remotion-skill", "ManimCommunity/manim", "processing/p5.js", "blender/blender"],
+      "validation": ["Kare hızı, süre, çözünürlük ve çıktı biçimini doğrula.", "Animasyonun görsel anlatım ve erişilebilirlik ölçütlerini kontrol et.", "Üçüncü taraf medya ve seslerin kullanım lisanslarını denetle."],
+      "cautions": ["Beceri yönergeleri, video render motorunun kurulmuş olduğunu göstermez."]
+    },
+    {
+      "id": "three-d",
+      "label_tr": "3B modelleme ve fotogrametri",
+      "triggers": ["3d", "3b", "üç boyut", "fotogrametri", "gltf", "glb", "mesh", "photogrammetry", "3d scanning"],
+      "repos": ["colmap/colmap", "blender/blender", "donmccurdy/glTF-Transform", "KhronosGroup/glTF-Validator", "google/model-viewer"],
+      "validation": ["Birim, koordinat sistemi, ölçek ve model bütünlüğünü kontrol et.", "Fotogrametrinin kaynak görüntü ve izinlerini kaydet.", "GLB/glTF çıktısını bağımsız doğrulayıcıda incele."],
+      "cautions": ["Ölçü doğruluğu ve tarihsel rekonstrüksiyon yorumları ayrıca belgelenmelidir."]
+    },
+    {
+      "id": "web-accessibility",
+      "label_tr": "Web tasarımı ve erişilebilirlik denetimi",
+      "triggers": ["wordpress", "woocommerce", "web sitesi", "arayüz", "responsive", "wcag", "erişilebilirlik", "web tasarım", "lighthouse", "frontend"],
+      "repos": ["WordPress/wordpress-develop", "microsoft/playwright", "GoogleChrome/lighthouse", "dequelabs/axe-core", "vercel-labs/agent-skills"],
+      "validation": ["Ana kullanıcı akışlarını gerçek tarayıcıda test et.", "Otomatik erişilebilirlik bulgularını klavye ve ekran okuyucu testleriyle tamamla.", "Performans ölçümlerini cihaz ve ağ koşullarıyla birlikte kaydet."],
+      "cautions": ["Canlı web sitesine değişiklik yapmadan önce açık yetki alınmalıdır."]
+    },
+    {
+      "id": "reverse-engineering",
+      "label_tr": "Yetkili tersine mühendislik",
+      "triggers": ["tersine mühendis", "reverse engineering", "decompile", "ikili dosya", "dekompilasyon", "firmware", "binary analysis", "disassembl"],
+      "repos": ["NationalSecurityAgency/ghidra", "angr/angr", "rizinorg/rizin", "aquasecurity/trivy", "semgrep/semgrep"],
+      "validation": ["İncelenen örnek üzerindeki analiz yetkisini ve yasal sınırları doğrula.", "Analizi izole ortamda yap ve bulguları bağımsız yöntemle çapraz kontrol et.", "Kanıtı, dosya karmasını ve araç sürümünü kaydet."],
+      "cautions": ["Yalnızca yetkili, meşru ve savunmacı analiz amaçlı kullan."]
+    },
+    {
+      "id": "data-analysis",
+      "label_tr": "Veri analizi ve istatistik",
+      "triggers": ["veri analizi", "istatistik", "veri seti", "dataset", "regresyon", "tahmin", "veri görselleştirme", "data analysis", "statistical"],
+      "repos": ["pandas-dev/pandas", "pola-rs/polars", "duckdb/duckdb", "scipy/scipy", "plotly/plotly.py"],
+      "validation": ["Eksik veri, aykırı gözlem ve örneklem kaynağını raporla.", "Uygun test varsayımlarını ve etki büyüklüğünü kontrol et.", "Tablo ve grafikleri ham veriyle karşılaştır."],
+      "cautions": ["Öngörü modelleri nedensellik kanıtı değildir."]
+    },
+    {
+      "id": "security-quality",
+      "label_tr": "Yazılım güvenlik ve kalite denetimi",
+      "triggers": ["güvenlik", "zafiyet", "gizli anahtar", "pentest", "red team", "kod incelemesi", "security audit", "vulnerability", "dependency audit"],
+      "repos": ["semgrep/semgrep", "gitleaks/gitleaks", "aquasecurity/trivy", "promptfoo/promptfoo", "PyCQA/bandit"],
+      "validation": ["Kapsam ve analiz yetkisini belirle.", "Bulguların yanlış pozitif olasılığını elle doğrula.", "Gizli bilgileri rapordan çıkar ve düzeltme önerisini güvenle test et."],
+      "cautions": ["Tarama sonuçları ve depo seçimi, otomatik yetkili pentest izni vermez."]
+    },
+    {
+      "id": "agent-evaluation",
+      "label_tr": "Ajan becerileri ve model değerlendirme",
+      "triggers": ["beceri geliştirme", "skill", "ajan", "agent", "prompt", "halüsinasyon", "llm", "model değerlendirme", "context engineering", "evals"],
+      "repos": ["muratcankoylan/Agent-Skills-for-Context-Engineering", "getsentry/skills", "openai/evals", "promptfoo/promptfoo", "obra/superpowers"],
+      "validation": ["Başarı ölçütünü ve kör değerlendirme örneklerini görev öncesi tanımla.", "Güvenlik, tutarlılık, kaynak doğruluğu ve tekrarlanabilirliği ölç.", "İyileştirmeyi başlangıç sürümüyle aynı test setinde karşılaştır."],
+      "cautions": ["Prompt veya beceri talimatı temel model ağırlıklarını güncellemez."]
+    },
+    {
+      "id": "automation-mcp",
+      "label_tr": "Otomasyon ve araç entegrasyonu",
+      "triggers": ["otomasyon", "mcp", "tekrarlanan iş", "iş akışı", "entegrasyon", "workflow", "automation", "tool integration"],
+      "repos": ["n8n-io/n8n", "activepieces/activepieces", "upstash/context7", "modelcontextprotocol/registry", "modelcontextprotocol/servers"],
+      "validation": ["Tetikleyici, veri akışı ve izin kapsamını belgeleyin.", "Kimlik bilgilerini depo dışında tut ve en az ayrıcalık ilkesini uygula.", "Tekrarlı çalıştırma, hata kurtarma ve kayıt tutma davranışını test et."],
+      "cautions": ["MCP sunucusu listesi veya konfigürasyonu ChatGPT Web bağlantısının etkinleştiği anlamına gelmez."]
+    }
+  ]
+}
