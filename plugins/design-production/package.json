@@ -1,0 +1,26 @@
+{
+  "name": "design-production-toolkit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Local production toolchain for SVG, PPTX, responsive email and web slides",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "build:vector": "node tools/create-vector.mjs",
+    "build:pptx": "node tools/create-presentation.mjs",
+    "build:email": "node tools/render-newsletter.mjs",
+    "qa": "python tools/qa.py",
+    "qa:strict": "python tools/qa.py --strict",
+    "demo": "npm run build:vector && npm run build:pptx && npm run build:email && npm run qa"
+  },
+  "dependencies": {
+    "@slidev/cli": "53.0.0",
+    "@svgdotjs/svg.js": "3.2.8",
+    "mjml": "5.4.1",
+    "paper": "0.16.0",
+    "pptxgenjs": "4.0.1"
+  }
+}

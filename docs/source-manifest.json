@@ -1,0 +1,53 @@
+{
+  "note": "SHA-256 provenance for six uploaded archives. These archives are not included in this repository.",
+  "sources": [
+    {
+      "archive": "plugins-main.zip",
+      "origin": "https://github.com/openai/plugins",
+      "versionObserved": "n/a",
+      "licenseObserved": "mixed",
+      "archiveSHA256": "ad943bea84960532727bc72bd653d6d54a610df47965d258ea4eaada3c1b2e08",
+      "bytes": 29504716
+    },
+    {
+      "archive": "svg.js-master.zip",
+      "origin": "https://github.com/svgdotjs/svg.js",
+      "versionObserved": "3.2.8",
+      "licenseObserved": "MIT",
+      "archiveSHA256": "5ade97f049c96eb0750d0f862cd256bdce27387e678a508600750dce8b2fe879",
+      "bytes": 311772
+    },
+    {
+      "archive": "paper.js-develop.zip",
+      "origin": "https://github.com/paperjs/paper.js",
+      "versionObserved": "0.16.0",
+      "licenseObserved": "MIT",
+      "archiveSHA256": "bc6c233507d0b510d5a905e6bfda93a767b29f8fa3238310ab878d75ef8b3704",
+      "bytes": 2447252
+    },
+    {
+      "archive": "PptxGenJS-master.zip",
+      "origin": "https://github.com/gitbrent/PptxGenJS",
+      "versionObserved": "4.0.1",
+      "licenseObserved": "MIT",
+      "archiveSHA256": "1b8c5522cc66e03fca9d80853a1aa32e3a8cb44d44a16a6ace6eb85f60020a6c",
+      "bytes": 42045619
+    },
+    {
+      "archive": "mjml-master.zip",
+      "origin": "https://github.com/mjmlio/mjml",
+      "versionObserved": "5.4.1",
+      "licenseObserved": "MIT",
+      "archiveSHA256": "b57f18f85c6343ff59ce486d0885d96d7f19b7efc500c9248b89e67e1fbd1b86",
+      "bytes": 397188
+    },
+    {
+      "archive": "slidev-main.zip",
+      "origin": "https://github.com/slidevjs/slidev",
+      "versionObserved": "53.0.0",
+      "licenseObserved": "MIT",
+      "archiveSHA256": "5262a5382e653d9dc32f560e0ea2a72921fcc660ba771b8fdb200b7301eeb952",
+      "bytes": 16765731
+    }
+  ]
+}

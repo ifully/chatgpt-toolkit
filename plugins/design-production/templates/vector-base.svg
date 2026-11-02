@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Editable design system sample</title>
+  <desc id="desc">Sample geometric layout, editable paths and text</desc>
+  <rect x="0" y="0" width="1200" height="1200" fill="#F6F4EF"/>
+  <path d="M120 150 H1080" stroke="#15191D" stroke-width="3"/>
+  <circle cx="600" cy="540" r="270" fill="none" stroke="#0B7058" stroke-width="35"/>
+  <path d="M430 620 L600 360 L770 620 Z" fill="#15191D"/>
+  <text x="120" y="975" font-family="Arial, sans-serif" font-weight="700" font-size="64" fill="#15191D">TASARIM SİSTEMİ</text>
+  <text x="123" y="1030" font-family="Arial, sans-serif" font-size="26" fill="#65706D">VECTOR · TYPOGRAPHY · GRID</text>
+</svg>

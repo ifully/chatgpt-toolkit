@@ -1,0 +1,31 @@
+<mjml>
+  <mj-head>
+    <mj-title>Örnek kurum bülteni — yayımlamadan önce düzenleyin</mj-title>
+    <mj-preview>Bu metni gerçek önizleme metninizle değiştirin.</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="Arial, Helvetica, sans-serif" />
+      <mj-text font-size="16px" line-height="24px" color="#15191D" />
+      <mj-button background-color="#0B7058" color="#FFFFFF" border-radius="4px" font-weight="bold" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#F6F4EF">
+    <mj-section background-color="#15191D" padding="30px 20px">
+      <mj-column>
+        <mj-text color="#FFFFFF" font-size="15px" font-weight="bold" letter-spacing="1px">KURUM / EDİTÖRYAL BÜLTEN</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#FFFFFF" padding="34px 24px 24px">
+      <mj-column>
+        <mj-text font-size="32px" line-height="37px" font-weight="bold">Sanat, tasarım ve araştırmadan haberler</mj-text>
+        <mj-text>Kurumsal bültenin giriş paragrafı için örnek metin. Gönderimden önce onaylı içeriği ekleyin.</mj-text>
+        <mj-button href="https://example.org/duyurular" padding-top="16px">Duyuruları incele</mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="20px 24px">
+      <mj-column>
+        <mj-text font-size="12px" color="#65706D">Gönderen bilgisi ve kurumsal adres buraya yazılmalıdır.</mj-text>
+        <mj-text font-size="12px"><a href="https://example.org/unsubscribe" style="color:#0B7058">Abonelikten ayrıl</a></mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

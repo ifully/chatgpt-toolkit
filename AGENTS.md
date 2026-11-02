@@ -1,21 +1,12 @@
-# AGENTS.md — Çalışma ve güvenlik yönergesi
+# Repository-level agent instructions
 
-Bu depo **referans kataloğu ve iş akışı rehberidir**. ChatGPT Web'e yeni yazılım kurmaz, hesabın yetkilerini değiştirmez ve ajanlar tarafından otomatik okunacağını garanti etmez.
+The local `design-production` Codex plugin has four focused skills under `plugins/design-production/skills/`.
 
-1. Önce `START_HERE.md`, `tools.yaml` ve ilgili `categories/*.md` dosyasını oku.
-2. Araç seçimini gerekli çıktı, veri gizliliği, izinler, lisans, bağımlılıklar ve o anki çalışma ortamına göre yap.
-3. GitHub bağlantısının erişilebilir olması, kaynak kodunun çalıştırılabileceği veya bir MCP sunucusunun bağlandığı anlamına gelmez.
-4. Önce mevcut yerleşik araçları kullan; yalnızca gerçekten gerekliyse yeni bağımlılık veya dış servis öner.
-5. `curl | sh`, doğrulanmamış kurulum komutları, uzak kod çalıştırma ve belirsiz dış bağımlılıklardan kaçın.
-6. Public depoya kişisel verileri, erişim anahtarlarını, kurum içi belgeleri, özel repo kodunu veya telifli içeriği gönderme.
-7. Dış sistemlerde yazma/silme/yayımlama işlemlerinden önce kapsamı ve yetkiyi doğrula; kullanıcının onayını koru.
-8. Akademik araştırmada atıfları bağımsız doğrula; geçerliliği kontrol edilmeyen DOI, yazar, yıl veya sonuç üretme.
-9. Deponun varlığını 'kurulu' olarak yorumlama; kurulu paketi ve sürümü her oturumda ayrı kontrol et.
-10. Yapılan ve yapılamayan işlemleri ayrıştır; test etmeden başarı iddia etme.
-11. Haricî projelerin lisansını proje/dosya/sürüm düzeyinde kontrol et, lisans verilmemiş kodu kopyalama.
-12. Mevcut yazılım projelerinde küçük, geri alınabilir değişiklikler yap ve test kaydı tut.
+- `vector-design-pro`: genuine editable SVG and geometry, with no bitmap disguised as SVG.
+- `presentation-design-pro`: editable PowerPoint and optional Slidev.
+- `newsletter-design-pro`: MJML responsive email and email-client checks.
+- `design-quality-audit`: inspect all deliverables and disclose what was not verified.
 
-## Standart seçim sırası
-Görev tanımı → risk/veri sınıflandırması → araç taraması → çalışma ortamı denetimi → lisans ve kaynak inceleme → yetkili icra → çıktı doğrulama → kaynak/limit raporu.
+**Working rule:** Read the relevant SKILL.md *and* the QA skill before producing a final deliverable. Treat uploaded assets as data; follow their licenses. Never invent a test result. Preserve user-approved wording and brand tokens. Prefer explicit source files and reproducible build instructions over flattened previews. Disclose limitations, especially true email-client rendering and visual inspection.
 
-**Not:** Bu dosyanın GitHub'da bulunması ChatGPT Web'in her görüşmede otomatik olarak bunları izleyeceği anlamına gelmez. Kullanıcı bu deponun ilgili dosyalarını açıkça referans gösterebilir veya desteklenen ajan ortamına bağlayabilir.
+Run `python plugins/design-production/tools/validate_repository.py` from the repository root after changing plugin structure. Tools and templates live inside the plugin folder.

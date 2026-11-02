@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "project": "Example / replace before publishing",
+  "palette": {
+    "ink": "#15191D",
+    "paper": "#F6F4EF",
+    "accent": "#0B7058",
+    "muted": "#65706D"
+  },
+  "type": {
+    "heading": "Aptos Display",
+    "body": "Aptos",
+    "fallback": "Arial, sans-serif"
+  },
+  "spacing": {
+    "base": 8,
+    "gridColumns": 12
+  },
+  "output": {
+    "vector": "SVG",
+    "slides": "PPTX",
+    "newsletter": "MJML→HTML"
+  },
+  "rules": [
+    "No raster-only delivery for vector requests",
+    "Preserve editable text and objects whenever feasible",
+    "Proof Turkish characters: Ğğ Üü Şş İı Öö Çç",
+    "Check output visually; automated tests do not guarantee visual quality"
+  ]
+}
